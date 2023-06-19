@@ -7,19 +7,18 @@ body {
     background-color: #2d2941;
 }
 
-header {
-    font-family: 'Nunito', sans-serif;
-    font-size: 9vw;
-    margin: 6vw;
-    color: white;
-    margin-bottom: 0;
-}
 .frame {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     max-width: 1408px;
     width: 99vw;
+}
+
+.title {
+    width: 50vw;
+    max-width: 977px;
+    margin: 3vw;
 }
 
 .site {
@@ -33,7 +32,7 @@ header {
 .site > a > img {
     width: 31.5vw;
     max-width: 450px;
-    margin: 6vw;
+    margin: 3vw;
 }
 
 .profile {
