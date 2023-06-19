@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0;
+    background-color: #938aff;
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100vw;
+}
+.checkerboard {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 93.75vw;
+    max-width: 1920px;
+    max-height: 1800px;
+}
+
+.sidebar__section {
+    width: 6.25vw;
+    height: 93.75vw;
+    max-width: 120px;
+    max-height: 1800px;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25vw;
+    height: 15.625vw;
+    max-width: 120px;
+    max-height: 300px;
+}
+.sidebar__icon {
+    width: 5.208vw;
+    height: 5.208vw;
+    max-width: 100px;
+    max-height: 100px;
+}
+.sidebar__kaho {
+    background-color: #f8b500;
+}
+.sidebar__kozue {
+    background-color: #68be8d;
+}
+.sidebar__sayaka {
+    background-color: #5383c3;
+}
+.sidebar__tsuzuri {
+    background-color: #c22d3b;
+}
+.sidebar__rurino {
+    background-color: #e7609e;
+}
+.sidebar__megumi {
+    background-color: #c8c2c6;
+}
+
+.spring {
+    width: 23.4375vw;
+    height: 93.75vw;
+    max-width: 450px;
+    max-height: 1800px;
+    background-color: #e6aebc;
+}
+
+.summer {
+    width: 23.4375vw;
+    height: 93.75vw;
+    max-width: 450px;
+    max-height: 1800px;
+    background-color: #ffcf4b;
+}
+
+.normal {
+    width: 46.875vw;
+    height: 93.75vw;
+    max-width: 900px;
+    max-height: 1800px;
+    background-color: #180134;
+}
+
+.card__section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 23.4375vw;
+    height: 7.8125vw;
+    max-width: 450px;
+    max-height: 150px;
+}
+.normalcard__section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 46.875vw;
+    height: 7.8125vw;
+    max-width: 900px;
+    max-height: 150px;
+}
+.cardimg {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+}
+.empty {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.card {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.card__icon {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    position: absolute;
+}
+
+.overlay {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    position: absolute;
+}
+
+.overlay__spring {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-color: #e6aebc;
+    opacity: 70%;
+    position: absolute;
+}
+.overlay__summer {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-color: #ffcf4b;
+    opacity: 70%;
+    position: absolute;
+}
+
+.overlay__normal {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-color: #180134;
+    opacity: 70%;
+    position: absolute;
+}
+
+.invisible {
+    opacity: 0%;
+}
+
+.insert__before {
+    display: none;
+}
+
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: #ff51c4;
+    font-size: 3vw;
+    color: white;
+    width: 12vw;
+    height: 9vw;
+    line-height: 110%;
+    margin: 3.2vw;
+    border-radius: 10px;
+    border: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.animation {
+    animation: fadeInOut 5s infinite;
+}
