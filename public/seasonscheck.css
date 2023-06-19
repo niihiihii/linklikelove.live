@@ -196,6 +196,20 @@ body {
     border: none;
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.profile > a > img {
+    width: 6vw;
+    height: 7.5vw;
+    max-width: 50px;
+    max-height: 62.5px;
+    margin: 2vw;
+}
+
 @keyframes fadeInOut {
     0% {
         opacity: 100%;
