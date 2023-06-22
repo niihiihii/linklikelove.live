@@ -272,3 +272,10 @@ function downloadURL(url, name){
 
 $('.downImgButton').click(downImg);
 /* Save Image Button */
+
+$('.infoButton').click(function() {
+    document.querySelector('.infoModal').showModal();
+});
+$('.modalCloseButton').click(function() {
+    document.querySelector('.infoModal').close();
+});

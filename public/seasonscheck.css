@@ -122,6 +122,7 @@ body {
     height: 6.667vw;
     max-width: 128px;
     max-height: 128px;
+    border: 0.25vw transparent solid;
 }
 
 .card__icon {
@@ -173,6 +174,31 @@ body {
     opacity: 0%;
 }
 
+.loginbonus {
+    border: 0.25vw #65defc solid;
+}
+.grandprix {
+    border: 0.25vw #b359ff solid;
+}
+.strongkaho {
+    border: 0.25vw #f8b500 solid;
+}
+.strongkozue {
+    border: 0.25vw #68be8d solid;
+}
+.strongsayaka {
+    border: 0.25vw #5383c3 solid;
+}
+.strongtsuzuri {
+    border: 0.25vw #c22d3b solid;
+}
+.strongrurino {
+    border: 0.25vw #e7609e solid;
+}
+.strongmegumi {
+    border: 0.25vw #c8c2c6 solid;
+}
+
 .button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -192,6 +218,54 @@ body {
     border: none;
 }
 
+dialog {
+    background-color: #918afc;
+    border: 0;
+    border-radius: 20px;
+    -ms-overflow-style: none;  /* IE and Edge 스크롤바 없애기*/
+    scrollbar-width: none; /*Firefox 스크롤바 없애기*/
+}
+
+dialog::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+    height: 30vw;
+    max-width: 576px;
+    max-height: 576px;
+}
+.modal__section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+    max-width: 576px;
+}
+.card__info {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    margin: 0.5vw;
+}
+
+.modalCloseButton {
+    width: 9vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    margin: 0.5vw;
+}
 .profile {
     display: flex;
     justify-content: center;
@@ -205,6 +279,7 @@ body {
     max-height: 62.5px;
     margin: 2vw;
 }
+
 
 @keyframes fadeInOut {
     0% {
@@ -221,3 +296,32 @@ body {
 .animation {
     animation: fadeInOut 5s infinite;
 }
+@media (min-width: 800px) {
+    .card {
+        border: 2px transparent solid;
+    }
+    .loginbonus {
+        border: 2px #65defc solid;
+    }
+    .grandprix {
+        border: 2px #b359ff solid;
+    }
+    .strongkaho {
+        border: 2px #f8b500 solid;
+    }
+    .strongkozue {
+        border: 2px #68be8d solid;
+    }
+    .strongsayaka {
+        border: 2px #5383c3 solid;
+    }
+    .strongtsuzuri {
+        border: 2px #c22d3b solid;
+    }
+    .strongrurino {
+        border: 2px #e7609e solid;
+    }
+    .strongmegumi {
+        border: 2px #c8c2c6 solid;
+    }
+  }
