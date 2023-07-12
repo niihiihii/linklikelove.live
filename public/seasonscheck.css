@@ -181,24 +181,6 @@ body {
     opacity: 0%;
 }
 
-.loginbonus {
-    width: 6.667vw;
-    height: 6.667vw;
-    max-width: 128px;
-    max-height: 128px;
-    background-image: url("/overlay/loginbonus.png");
-    background-size: contain;
-    position: absolute;
-}
-.grandprix {
-    width: 6.667vw;
-    height: 6.667vw;
-    max-width: 128px;
-    max-height: 128px;
-    background-image: url("/overlay/grandprix.png");
-    background-size: contain;
-    position: absolute;
-}
 .strongkaho {
     border: 0.25vw #f8b500 solid;
 }
