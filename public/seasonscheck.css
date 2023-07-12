@@ -132,6 +132,13 @@ body {
     max-height: 128px;
     position: absolute;
 }
+.limitbreak {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    position: absolute;
+}
 
 .overlay {
     width: 6.667vw;
@@ -175,10 +182,22 @@ body {
 }
 
 .loginbonus {
-    border: 0.25vw #65defc solid;
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-image: url("/overlay/loginbonus.png");
+    background-size: contain;
+    position: absolute;
 }
 .grandprix {
-    border: 0.25vw #b359ff solid;
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-image: url("/overlay/grandprix.png");
+    background-size: contain;
+    position: absolute;
 }
 .strongkaho {
     border: 0.25vw #f8b500 solid;
@@ -216,6 +235,16 @@ body {
     margin: 3.2vw;
     border-radius: 2vw;
     border: none;
+}
+
+.buttonimg {
+    width: 12vw;
+    height: 9vw;
+    position: absolute;
+}
+
+.checkButton__text {
+    font-size: 4vw;
 }
 
 dialog {
@@ -280,7 +309,6 @@ dialog::backdrop {
     margin: 2vw;
 }
 
-
 @keyframes fadeInOut {
     0% {
         opacity: 100%;
@@ -299,12 +327,6 @@ dialog::backdrop {
 @media (min-width: 800px) {
     .card {
         border: 2px transparent solid;
-    }
-    .loginbonus {
-        border: 2px #65defc solid;
-    }
-    .grandprix {
-        border: 2px #b359ff solid;
     }
     .strongkaho {
         border: 2px #f8b500 solid;
