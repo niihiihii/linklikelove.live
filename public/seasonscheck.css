@@ -71,17 +71,17 @@ body {
 }
 
 .summer {
-    width: 23.4375vw;
+    width: 31.25vw;
     height: 93.75vw;
-    max-width: 450px;
+    max-width: 600px;
     max-height: 1800px;
     background-color: #ffcf4b;
 }
 
 .normal {
-    width: 46.875vw;
+    width: 39.0625vw;
     height: 93.75vw;
-    max-width: 900px;
+    max-width: 750px;
     max-height: 1800px;
     background-color: #180134;
 }
@@ -95,13 +95,22 @@ body {
     max-width: 450px;
     max-height: 150px;
 }
+.summercard__section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 31.25vw;
+    height: 7.8125vw;
+    max-width: 600px;
+    max-height: 150px;
+}
 .normalcard__section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 46.875vw;
+    width: 39.0625vw;
     height: 7.8125vw;
-    max-width: 900px;
+    max-width: 750px;
     max-height: 150px;
 }
 .cardimg {
