@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
 .autumn {
     width: 23.4375vw;
     max-width: 450px;
-    background-color: orangered;
+    background-color: #a56861;
 }
 
 .normal {
@@ -151,12 +151,23 @@ body::-webkit-scrollbar {
     opacity: 70%;
     position: absolute;
 }
+
 .overlay__summer {
     width: 6.667vw;
     height: 6.667vw;
     max-width: 128px;
     max-height: 128px;
     background-color: #ffcf4b;
+    opacity: 70%;
+    position: absolute;
+}
+
+.overlay__autumn {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
+    background-color: #a56861;
     opacity: 70%;
     position: absolute;
 }
