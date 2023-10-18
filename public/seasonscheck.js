@@ -448,7 +448,7 @@ function changeLimitbreak(cards, count, num) {
 /* Save Image Button */
 function downImg(){
     const checkerboard = document.querySelector(".checkerboard");
-	html2canvas(checkerboard,{ backgroundColor: "#180134", scale: 1920/checkerboard.offsetWidth, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
+	html2canvas(checkerboard,{ backgroundColor: "#938aff", scale: 1920/checkerboard.offsetWidth, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
 		const myImage = canvas.toDataURL();
 		downloadURL(myImage, "image.png") 
 	});
