@@ -126,8 +126,8 @@ body::-webkit-scrollbar {
 .season__icon {
     width: 6.25vw;
     max-width: 120px;
-    height: 2.5vw;
-    max-height: 48px;
+    height: 3.75vw;
+    max-height: 72px;
 }
 .spring {
     width: 23.4375vw;
@@ -186,6 +186,13 @@ body::-webkit-scrollbar {
     height: 6.667vw;
     max-width: 128px;
     max-height: 128px;
+    opacity: 30%;
+}
+.iconimg {
+    width: 6.667vw;
+    height: 6.667vw;
+    max-width: 128px;
+    max-height: 128px;
 }
 .empty {
     width: 6.667vw;
@@ -201,21 +208,6 @@ body::-webkit-scrollbar {
     max-width: 128px;
     max-height: 128px;
     border: 0.25vw transparent solid;
-}
-
-.card__icon {
-    width: 6.667vw;
-    height: 6.667vw;
-    max-width: 128px;
-    max-height: 128px;
-    position: absolute;
-}
-.limitbreak {
-    width: 6.667vw;
-    height: 6.667vw;
-    max-width: 128px;
-    max-height: 128px;
-    position: absolute;
 }
 
 .overlay {
@@ -265,7 +257,9 @@ body::-webkit-scrollbar {
     opacity: 70%;
     position: absolute;
 }
-
+.visible {
+    opacity: 100%;
+}
 .invisible {
     opacity: 0%;
 }
