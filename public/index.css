@@ -23,7 +23,7 @@ body {
 
 .site {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-flow: row wrap;
     max-width: 1408px;
     width: 99vw;
@@ -53,10 +53,5 @@ body {
 @media screen and (max-width: 1000px) {
     .site > a > img {
         width: 45vw;
-    }
-}
-@media screen and (max-width: 750px) {
-    .site > a > img {
-        width: 60vw;
     }
 }
