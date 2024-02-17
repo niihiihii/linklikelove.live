@@ -1004,8 +1004,8 @@ function displayCard(cards, count, num) {
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('_idolized.png', '.png');
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('.png', '_idolized.png');
         cards[num].children[0].children[0].classList.add("visible");
-        cards[num].children[1].clashildren[0].src = cards[num].children[1].children[0].src.replace('plus1', 'plus2');
-        cards[num].children[1].clashildren[0].src = cards[num].children[1].children[0].src.replace('plus0', 'plus2');
+        cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus1', 'plus2');
+        cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus0', 'plus2');
         cards[num].children[2].classList.remove("invisible");
     }
 }
