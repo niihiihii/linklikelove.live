@@ -212,6 +212,10 @@ body::-webkit-scrollbar {
     position: absolute;
 }
 
+.opacity60 {
+    opacity: 60%;
+}
+
 .visible {
     opacity: 100%;
 }
