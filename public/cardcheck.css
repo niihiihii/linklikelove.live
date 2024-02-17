@@ -75,17 +75,17 @@ body::-webkit-scrollbar {
     display: flex;
     width: 46.875vw;
     max-width: 900px;
-    height: 7.8125vw;
-    max-height: 150px;
+    height: 10.417vw;
+    max-height: 200px;
     background-image: url("dr/dr_background.png");
     background-size: cover;
 }
 
 .dr__icon {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     border: 0.25vw transparent solid;
 }
 
@@ -93,16 +93,16 @@ body::-webkit-scrollbar {
     display: flex;
     width: 46.875vw;
     max-width: 900px;
-    height: 7.8125vw;
-    max-height: 150px;
+    height: 10.417vw;
+    max-height: 200px;
     background-color: #e9dafe;
 }
 
 .party__icon {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     border: 0.25vw transparent solid;
 }
 
@@ -160,55 +160,55 @@ body::-webkit-scrollbar {
     justify-content: space-evenly;
     align-items: center;
     width: 23.4375vw;
-    height: 7.8125vw;
+    height: 10.417vw;
     max-width: 450px;
-    max-height: 150px;
+    max-height: 200px;
 }
 
 .commoncard__section {
     display: flex;
     flex-flow: row wrap;
     width: 93.75vw;
-    height: 7.8125vw;
+    height: 10.417vw;
     max-width: 1800px;
-    max-height: 150px;
+    max-height: 200px;
 }
 .cardimg {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     opacity: 30%;
     position: absolute;
 }
 .iconimg {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     position: absolute;
 }
 .empty {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     border: 0.25vw transparent solid;
 }
 
 .card {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     border: 0.25vw transparent solid;
 }
 
 .overlay {
     width: 6.667vw;
-    height: 6.667vw;
+    height: 9.167vw;
     max-width: 128px;
-    max-height: 128px;
+    max-height: 176px;
     position: absolute;
 }
 
