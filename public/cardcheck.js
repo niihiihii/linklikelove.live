@@ -963,14 +963,23 @@ function saveData() {
 function displayDr(cards, count, num) {
     if (count[num] % 3 === 0) {
         cards[num].children[0].children[0].classList.remove("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.remove("visible");
+        }
         cards[num].children[1].children[0].src = "/overlay/dr_plus0.png";
         cards[num].children[2].classList.add("invisible");
     } else if (count[num] % 3 === 1) {
         cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
         cards[num].children[1].children[0].src = "/overlay/dr_plus0.png";
         cards[num].children[2].classList.remove("invisible");
     } else {
         cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
         cards[num].children[1].children[0].src = "/overlay/dr_plus1.png";
         cards[num].children[2].classList.remove("invisible");
     }
@@ -984,12 +993,18 @@ function displayCard(cards, count, num) {
     if (count[num] % 4 === 0) {
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('_idolized.png', '.png');
         cards[num].children[0].children[0].classList.remove("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.remove("visible");
+        }
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus2', 'plus0');
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus1', 'plus0');
         cards[num].children[2].classList.add("invisible");
     } else if (count[num] % 4 === 1) {
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('_idolized.png', '.png');
         cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus2', 'plus0');
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus1', 'plus0');
         cards[num].children[2].classList.remove("invisible");
@@ -997,6 +1012,9 @@ function displayCard(cards, count, num) {
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('_idolized.png', '.png');
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('.png', '_idolized.png');
         cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus0', 'plus1');
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus2', 'plus1');
         cards[num].children[2].classList.remove("invisible");
@@ -1004,6 +1022,9 @@ function displayCard(cards, count, num) {
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('_idolized.png', '.png');
         cards[num].children[0].children[0].src = cards[num].children[0].children[0].src.replace('.png', '_idolized.png');
         cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus1', 'plus2');
         cards[num].children[1].children[0].src = cards[num].children[1].children[0].src.replace('plus0', 'plus2');
         cards[num].children[2].classList.remove("invisible");
