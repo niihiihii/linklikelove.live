@@ -16,6 +16,13 @@ const drList = ['kaho__dr',
                 'rurino__dr',
                 'megumi__dr'];
 
+const specialList = ['kaho__special__ur',
+                     'kozue__special__ur',
+                     'sayaka__special__ur',
+                     'tsuzuri__special__ur',
+                     'rurino__special__ur',
+                     'megumi__special__ur'];
+
 const cardList = ['kaho__party__ur',
                   'kozue__party__ur',
                   'sayaka__party__ur',
@@ -83,10 +90,13 @@ const cardList = ['kaho__party__ur',
                   'megumi__common__ur',
                   'megumi__common__sr'];
 const drNodeList = [];
+const specialNodeList = [];
 const cardNodeList = [];
 const drData = [];
+const specialData = [];
 const cardData = [];
 const drlimitbreakData = [];
+const speciallimitbreakData = [];
 const limitbreakData = [];
 const db = firebase.firestore();
 
@@ -100,6 +110,16 @@ for (let i = 0; i < drList.length; i++) {
         drData[i].push(0);
         drlimitbreakData[i].push(0);
         drNodeList[i].eq(j).on("click", () => changeDr(drNodeList[i], drData[i] , j));
+    }
+}
+for (let i = 0; i < specialList.length; i++) {
+    specialNodeList.push($('.' + specialList[i]));
+    specialData.push([]);
+    speciallimitbreakData.push([]);
+    for (let j = 0; j < specialNodeList[i].length; j++) {  
+        specialData[i].push(0);
+        speciallimitbreakData[i].push(0);
+        specialNodeList[i].eq(j).on("click", () => changeSpecial(specialNodeList[i], specialData[i] , j));
     }
 }
 for (let i = 0; i < cardList.length; i++) {
@@ -126,6 +146,12 @@ $('.checkButton').on("click", function() {
                 drNodeList[i].eq(j).on("click", () => changeDr(drNodeList[i], drData[i] , j));
             }
         }
+        for (let i = 0; i < specialList.length; i++) {
+            for (let j = 0; j < specialNodeList[i].length; j++) {
+                specialNodeList[i].eq(j).off();
+                specialNodeList[i].eq(j).on("click", () => changeSpecial(specialNodeList[i], specialData[i] , j));
+            }
+        }
         for (let i = 0; i < cardList.length; i++) {
             for (let j = 0; j < cardNodeList[i].length; j++) {
                 cardNodeList[i].eq(j).off();
@@ -138,6 +164,12 @@ $('.checkButton').on("click", function() {
             for (let j = 0; j < drNodeList[i].length; j++) {
                 drNodeList[i].eq(j).off();
                 drNodeList[i].eq(j).on("click", () => changeLimitbreak(drNodeList[i], drlimitbreakData[i] , j));
+            }
+        }
+        for (let i = 0; i < specialList.length; i++) {
+            for (let j = 0; j < specialNodeList[i].length; j++) {
+                specialNodeList[i].eq(j).off();
+                specialNodeList[i].eq(j).on("click", () => changeLimitbreak(specialNodeList[i], speciallimitbreakData[i] , j));
             }
         }
         for (let i = 0; i < cardList.length; i++) {
@@ -192,6 +224,23 @@ function loadData() {
             db.collection('users').doc(uid).get().then((result) => {
                 if (result.data() === undefined) {
                     alert("Data doesn't exist");
+                } else if (result.data().kaho__special__ur === undefined) {
+                    db.collection('users').doc(uid).set({
+                        kaho__special__ur: [],
+                        kozue__special__ur: [],
+                        sayaka__special__ur: [],
+                        tsuzuri__special__ur: [],
+                        rurino__special__ur: [],
+                        megumi__special__ur: [],
+                        kaho__special__ur__limitbreak: [],
+                        kozue__special__ur__limitbreak: [],
+                        sayaka__special__ur__limitbreak: [],
+                        tsuzuri__special__ur__limitbreak: [],
+                        rurino__special__ur__limitbreak: [],
+                        megumi__special__ur__limitbreak: []
+                    },
+                    {merge: true});
+                    loadData();
                 } else {
                     for (let i = 0; i < result.data().kaho__dr.length; i++){
                         drData[0][i] = result.data().kaho__dr[i];
@@ -216,6 +265,30 @@ function loadData() {
                     for (let i = 0; i < result.data().megumi__dr.length; i++){
                         drData[5][i] = result.data().megumi__dr[i];
                         displayDr(drNodeList[5], drData[5], i);
+                    }
+                    for (let i = 0; i < result.data().kaho__special__ur.length; i++){
+                        specialData[0][i] = result.data().kaho__special__ur[i];
+                        displaySpecial(specialNodeList[0], specialData[0], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__special__ur.length; i++){
+                        specialData[1][i] = result.data().kozue__special__ur[i];
+                        displaySpecial(specialNodeList[1], specialData[1], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__special__ur.length; i++){
+                        specialData[2][i] = result.data().sayaka__special__ur[i];
+                        displaySpecial(specialNodeList[2], specialData[2], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__special__ur.length; i++){
+                        specialData[3][i] = result.data().tsuzuri__special__ur[i];
+                        displaySpecial(specialNodeList[3], specialData[3], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__special__ur.length; i++){
+                        specialData[4][i] = result.data().rurino__special__ur[i];
+                        displaySpecial(specialNodeList[4], specialData[4], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__special__ur.length; i++){
+                        specialData[5][i] = result.data().megumi__special__ur[i];
+                        displaySpecial(specialNodeList[5], specialData[5], i);
                     }
                     for (let i = 0; i < result.data().kaho__party__ur.length; i++){
                         cardData[0][i] = result.data().kaho__party__ur[i];
@@ -506,6 +579,30 @@ function loadData() {
                         drlimitbreakData[5][i] = result.data().megumi__dr__limitbreak[i];
                         displayLimitbreak(drNodeList[5], drlimitbreakData[5], i);
                     }
+                    for (let i = 0; i < result.data().kaho__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[0][i] = result.data().kaho__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[0], speciallimitbreakData[0], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[1][i] = result.data().kozue__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[1], speciallimitbreakData[1], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[2][i] = result.data().sayaka__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[2], speciallimitbreakData[2], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[3][i] = result.data().tsuzuri__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[3], speciallimitbreakData[3], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[4][i] = result.data().rurino__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[4], speciallimitbreakData[4], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[5][i] = result.data().megumi__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[5], speciallimitbreakData[5], i);
+                    }
                     for (let i = 0; i < result.data().kaho__party__ur__limitbreak.length; i++){
                         limitbreakData[0][i] = result.data().kaho__party__ur__limitbreak[i];
                         displayLimitbreak(cardNodeList[0], limitbreakData[0], i);
@@ -792,6 +889,11 @@ function saveData() {
                     drData[i][j] = drData[i][j] % 3; 
                 }
             }
+            for (let i = 0; i < specialData.length; i++) {
+                for (let j = 0; j < specialData[i].length; j++) {
+                    specialData[i][j] = specialData[i][j] % 3; 
+                }
+            }
             for (let i = 0; i < cardData.length; i++) {
                 for (let j = 0; j < cardData[i].length; j++) {
                     cardData[i][j] = cardData[i][j] % 4; 
@@ -800,6 +902,11 @@ function saveData() {
             for (let i = 0; i < drlimitbreakData.length; i++) {
                 for (let j = 0; j < drlimitbreakData[i].length; j++) {
                     drlimitbreakData[i][j] = drlimitbreakData[i][j] % 5; 
+                }
+            }
+            for (let i = 0; i < speciallimitbreakData.length; i++) {
+                for (let j = 0; j < speciallimitbreakData[i].length; j++) {
+                    speciallimitbreakData[i][j] = speciallimitbreakData[i][j] % 5; 
                 }
             }
             for (let i = 0; i < limitbreakData.length; i++) {
@@ -814,6 +921,12 @@ function saveData() {
                 tsuzuri__dr: drData[3],
                 rurino__dr: drData[4],
                 megumi__dr: drData[5],
+                kaho__special__ur: specialData[0],
+                kozue__special__ur: specialData[1],
+                sayaka__special__ur: specialData[2],
+                tsuzuri__special__ur: specialData[3],
+                rurino__special__ur: specialData[4],
+                megumi__special__ur: specialData[5],
                 kaho__party__ur: cardData[0],
                 kozue__party__ur: cardData[1],
                 sayaka__party__ur: cardData[2],
@@ -886,6 +999,12 @@ function saveData() {
                 tsuzuri__dr__limitbreak: drlimitbreakData[3],
                 rurino__dr__limitbreak: drlimitbreakData[4],
                 megumi__dr__limitbreak: drlimitbreakData[5],
+                kaho__special__ur__limitbreak: speciallimitbreakData[0],
+                kozue__special__ur__limitbreak: speciallimitbreakData[1],
+                sayaka__special__ur__limitbreak: speciallimitbreakData[2],
+                tsuzuri__special__ur__limitbreak: speciallimitbreakData[3],
+                rurino__special__ur__limitbreak: speciallimitbreakData[4],
+                megumi__special__ur__limitbreak: speciallimitbreakData[5],
                 kaho__party__ur__limitbreak: limitbreakData[0],
                 kozue__party__ur__limitbreak: limitbreakData[1],
                 sayaka__party__ur__limitbreak: limitbreakData[2],
@@ -987,6 +1106,35 @@ function displayDr(cards, count, num) {
 function changeDr(cards, count, num) {
     count[num]++;    
     displayDr(cards, count, num);
+}
+
+function displaySpecial(cards, count, num) {
+    if (count[num] % 3 === 0) {
+        cards[num].children[0].children[0].classList.remove("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.remove("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/ur_plus1.png";
+        cards[num].children[2].classList.add("invisible");
+    } else if (count[num] % 3 === 1) {
+        cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/ur_plus1.png";
+        cards[num].children[2].classList.remove("invisible");
+    } else {
+        cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/ur_plus2.png";
+        cards[num].children[2].classList.remove("invisible");
+    }
+}
+function changeSpecial(cards, count, num) {
+    count[num]++;    
+    displaySpecial(cards, count, num);
 }
 
 function displayCard(cards, count, num) {

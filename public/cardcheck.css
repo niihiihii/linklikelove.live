@@ -73,8 +73,8 @@ body::-webkit-scrollbar {
 
 .dr {
     display: flex;
-    width: 46.875vw;
-    max-width: 900px;
+    width: 23.4375vw;
+    max-width: 450px;
     height: 10.417vw;
     max-height: 200px;
     background-image: url("dr/dr_background.png");
@@ -91,14 +91,31 @@ body::-webkit-scrollbar {
 
 .party {
     display: flex;
-    width: 46.875vw;
-    max-width: 900px;
+    width: 23.4375vw;
+    max-width: 450px;
     height: 10.417vw;
     max-height: 200px;
     background-color: #e9dafe;
 }
 
 .party__icon {
+    width: 6.667vw;
+    height: 9.167vw;
+    max-width: 128px;
+    max-height: 176px;
+    border: 0.25vw transparent solid;
+}
+
+.special {
+    display: flex;
+    width: 46.875vw;
+    max-width: 900px;
+    height: 10.417vw;
+    max-height: 200px;
+    background-color: #b2ffdd;
+}
+
+.special__icon {
     width: 6.667vw;
     height: 9.167vw;
     max-width: 128px;
