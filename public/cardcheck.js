@@ -958,51 +958,51 @@ function loadData() {
                     }
                     for (let i = 0; i < result.data().kaho__graduation__ur__limitbreak.length; i++){
                         limitbreakData[66][i] = result.data().kaho__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[66], limitbreakData[66], i);
+                        displayLimitbreak(cardNodeList[66], limitbreakData[66], i);
                     }
                     for (let i = 0; i < result.data().kaho__graduation__sr__limitbreak.length; i++){
                         limitbreakData[67][i] = result.data().kaho__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[67], limitbreakData[67], i);
+                        displayLimitbreak(cardNodeList[67], limitbreakData[67], i);
                     }
                     for (let i = 0; i < result.data().kozue__graduation__ur__limitbreak.length; i++){
                         limitbreakData[68][i] = result.data().kozue__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[68], limitbreakData[68], i);
+                        displayLimitbreak(cardNodeList[68], limitbreakData[68], i);
                     }
                     for (let i = 0; i < result.data().kozue__graduation__sr__limitbreak.length; i++){
                         limitbreakData[69][i] = result.data().kozue__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[69], limitbreakData[69], i);
+                        displayLimitbreak(cardNodeList[69], limitbreakData[69], i);
                     }
                     for (let i = 0; i < result.data().sayaka__graduation__ur__limitbreak.length; i++){
                         limitbreakData[70][i] = result.data().sayaka__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[70], limitbreakData[70], i);
+                        displayLimitbreak(cardNodeList[70], limitbreakData[70], i);
                     }
                     for (let i = 0; i < result.data().sayaka__graduation__sr__limitbreak.length; i++){
                         limitbreakData[71][i] = result.data().sayaka__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[71], limitbreakData[71], i);
+                        displayLimitbreak(cardNodeList[71], limitbreakData[71], i);
                     }
                     for (let i = 0; i < result.data().tsuzuri__graduation__ur__limitbreak.length; i++){
                         limitbreakData[72][i] = result.data().tsuzuri__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[72], limitbreakData[72], i);
+                        displayLimitbreak(cardNodeList[72], limitbreakData[72], i);
                     }
                     for (let i = 0; i < result.data().tsuzuri__graduation__sr__limitbreak.length; i++){
                         limitbreakData[73][i] = result.data().tsuzuri__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[73], limitbreakData[73], i);
+                        displayLimitbreak(cardNodeList[73], limitbreakData[73], i);
                     }
                     for (let i = 0; i < result.data().rurino__graduation__ur__limitbreak.length; i++){
                         limitbreakData[74][i] = result.data().rurino__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[74], limitbreakData[74], i);
+                        displayLimitbreak(cardNodeList[74], limitbreakData[74], i);
                     }
                     for (let i = 0; i < result.data().rurino__graduation__sr__limitbreak.length; i++){
                         limitbreakData[75][i] = result.data().rurino__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[75], limitbreakData[75], i);
+                        displayLimitbreak(cardNodeList[75], limitbreakData[75], i);
                     }
                     for (let i = 0; i < result.data().megumi__graduation__ur__limitbreak.length; i++){
                         limitbreakData[76][i] = result.data().megumi__graduation__ur__limitbreak[i];
-                        displayCard(cardNodeList[76], limitbreakData[76], i);
+                        displayLimitbreak(cardNodeList[76], limitbreakData[76], i);
                     }
                     for (let i = 0; i < result.data().megumi__graduation__sr__limitbreak.length; i++){
                         limitbreakData[77][i] = result.data().megumi__graduation__sr__limitbreak[i];
-                        displayCard(cardNodeList[77], limitbreakData[77], i);
+                        displayLimitbreak(cardNodeList[77], limitbreakData[77], i);
                     }
 
                     alert("Data Loaded"); 
