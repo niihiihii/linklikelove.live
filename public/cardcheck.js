@@ -88,7 +88,19 @@ const cardList = ['kaho__party__ur',
                   'rurino__common__ur',
                   'rurino__common__sr',
                   'megumi__common__ur',
-                  'megumi__common__sr'];
+                  'megumi__common__sr',
+                  'kaho__graduation__ur',
+                  'kaho__graduation__sr',
+                  'kozue__graduation__ur',
+                  'kozue__graduation__sr',
+                  'sayaka__graduation__ur',
+                  'sayaka__graduation__sr',
+                  'tsuzuri__graduation__ur',
+                  'tsuzuri__graduation__sr',
+                  'rurino__graduation__ur',
+                  'rurino__graduation__sr',
+                  'megumi__graduation__ur',
+                  'megumi__graduation__sr'];
 const drNodeList = [];
 const specialNodeList = [];
 const cardNodeList = [];
@@ -238,6 +250,35 @@ function loadData() {
                         tsuzuri__special__ur__limitbreak: [],
                         rurino__special__ur__limitbreak: [],
                         megumi__special__ur__limitbreak: []
+                    },
+                    {merge: true});
+                    loadData();
+                } else if (result.data().kaho__graduation__ur === undefined) {
+                    db.collection('users').doc(uid).set({
+                        kaho__graduation__ur: [],
+                        kozue__graduation__ur: [],
+                        sayaka__graduation__ur: [],
+                        tsuzuri__graduation__ur: [],
+                        rurino__graduation__ur: [],
+                        megumi__graduation__ur: [],
+                        kaho__graduation__sr: [],
+                        kozue__graduation__sr: [],
+                        sayaka__graduation__sr: [],
+                        tsuzuri__graduation__sr: [],
+                        rurino__graduation__sr: [],
+                        megumi__graduation__sr: [],
+                        kaho__graduation__ur__limitbreak: [],
+                        kozue__graduation__ur__limitbreak: [],
+                        sayaka__graduation__ur__limitbreak: [],
+                        tsuzuri__graduation__ur__limitbreak: [],
+                        rurino__graduation__ur__limitbreak: [],
+                        megumi__graduation__ur__limitbreak: [],
+                        kaho__graduation__sr__limitbreak: [],
+                        kozue__graduation__sr__limitbreak: [],
+                        sayaka__graduation__sr__limitbreak: [],
+                        tsuzuri__graduation__sr__limitbreak: [],
+                        rurino__graduation__sr__limitbreak: [],
+                        megumi__graduation__sr__limitbreak: []
                     },
                     {merge: true});
                     loadData();
@@ -554,6 +595,54 @@ function loadData() {
                         cardData[65][i] = result.data().megumi__common__sr[i];
                         displayCard(cardNodeList[65], cardData[65], i);
                     }
+                    for (let i = 0; i < result.data().kaho__graduation__ur.length; i++){
+                        cardData[66][i] = result.data().kaho__graduation__ur[i];
+                        displayCard(cardNodeList[66], cardData[66], i);
+                    }
+                    for (let i = 0; i < result.data().kaho__graduation__sr.length; i++){
+                        cardData[67][i] = result.data().kaho__graduation__sr[i];
+                        displayCard(cardNodeList[67], cardData[67], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__graduation__ur.length; i++){
+                        cardData[68][i] = result.data().kozue__graduation__ur[i];
+                        displayCard(cardNodeList[68], cardData[68], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__graduation__sr.length; i++){
+                        cardData[69][i] = result.data().kozue__graduation__sr[i];
+                        displayCard(cardNodeList[69], cardData[69], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__graduation__ur.length; i++){
+                        cardData[70][i] = result.data().sayaka__graduation__ur[i];
+                        displayCard(cardNodeList[70], cardData[70], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__graduation__sr.length; i++){
+                        cardData[71][i] = result.data().sayaka__graduation__sr[i];
+                        displayCard(cardNodeList[71], cardData[71], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__graduation__ur.length; i++){
+                        cardData[72][i] = result.data().tsuzuri__graduation__ur[i];
+                        displayCard(cardNodeList[72], cardData[72], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__graduation__sr.length; i++){
+                        cardData[73][i] = result.data().tsuzuri__graduation__sr[i];
+                        displayCard(cardNodeList[73], cardData[73], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__graduation__ur.length; i++){
+                        cardData[74][i] = result.data().rurino__graduation__ur[i];
+                        displayCard(cardNodeList[74], cardData[74], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__graduation__sr.length; i++){
+                        cardData[75][i] = result.data().rurino__graduation__sr[i];
+                        displayCard(cardNodeList[75], cardData[75], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__graduation__ur.length; i++){
+                        cardData[76][i] = result.data().megumi__graduation__ur[i];
+                        displayCard(cardNodeList[76], cardData[76], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__graduation__sr.length; i++){
+                        cardData[77][i] = result.data().megumi__graduation__sr[i];
+                        displayCard(cardNodeList[77], cardData[77], i);
+                    }
 
                     for (let i = 0; i < result.data().kaho__dr__limitbreak.length; i++){
                         drlimitbreakData[0][i] = result.data().kaho__dr__limitbreak[i];
@@ -867,6 +956,54 @@ function loadData() {
                         limitbreakData[65][i] = result.data().megumi__common__sr__limitbreak[i];
                         displayLimitbreak(cardNodeList[65], limitbreakData[65], i);
                     }
+                    for (let i = 0; i < result.data().kaho__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[66][i] = result.data().kaho__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[66], limitbreakData[66], i);
+                    }
+                    for (let i = 0; i < result.data().kaho__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[67][i] = result.data().kaho__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[67], limitbreakData[67], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[68][i] = result.data().kozue__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[68], limitbreakData[68], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[69][i] = result.data().kozue__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[69], limitbreakData[69], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[70][i] = result.data().sayaka__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[70], limitbreakData[70], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[71][i] = result.data().sayaka__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[71], limitbreakData[71], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[72][i] = result.data().tsuzuri__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[72], limitbreakData[72], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[73][i] = result.data().tsuzuri__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[73], limitbreakData[73], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[74][i] = result.data().rurino__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[74], limitbreakData[74], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[75][i] = result.data().rurino__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[75], limitbreakData[75], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[76][i] = result.data().megumi__graduation__ur__limitbreak[i];
+                        displayCard(cardNodeList[76], limitbreakData[76], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[77][i] = result.data().megumi__graduation__sr__limitbreak[i];
+                        displayCard(cardNodeList[77], limitbreakData[77], i);
+                    }
 
                     alert("Data Loaded"); 
                 }
@@ -993,6 +1130,18 @@ function saveData() {
                 rurino__common__sr: cardData[63],
                 megumi__common__ur: cardData[64],
                 megumi__common__sr: cardData[65],
+                kaho__graduation__ur: cardData[66],
+                kaho__graduation__sr: cardData[67],
+                kozue__graduation__ur: cardData[68],
+                kozue__graduation__sr: cardData[69],
+                sayaka__graduation__ur: cardData[70],
+                sayaka__graduation__sr: cardData[71],
+                tsuzuri__graduation__ur: cardData[72],
+                tsuzuri__graduation__sr: cardData[73],
+                rurino__graduation__ur: cardData[74],
+                rurino__graduation__sr: cardData[75],
+                megumi__graduation__ur: cardData[76],
+                megumi__graduation__sr: cardData[77],
                 kaho__dr__limitbreak: drlimitbreakData[0],
                 kozue__dr__limitbreak: drlimitbreakData[1],
                 sayaka__dr__limitbreak: drlimitbreakData[2],
@@ -1070,7 +1219,19 @@ function saveData() {
                 rurino__common__ur__limitbreak: limitbreakData[62],
                 rurino__common__sr__limitbreak: limitbreakData[63],
                 megumi__common__ur__limitbreak: limitbreakData[64],
-                megumi__common__sr__limitbreak: limitbreakData[65]
+                megumi__common__sr__limitbreak: limitbreakData[65],
+                kaho__graduation__ur__limitbreak: limitbreakData[66],
+                kaho__graduation__sr__limitbreak: limitbreakData[67],
+                kozue__graduation__ur__limitbreak: limitbreakData[68],
+                kozue__graduation__sr__limitbreak: limitbreakData[69],
+                sayaka__graduation__ur__limitbreak: limitbreakData[70],
+                sayaka__graduation__sr__limitbreak: limitbreakData[71],
+                tsuzuri__graduation__ur__limitbreak: limitbreakData[72],
+                tsuzuri__graduation__sr__limitbreak: limitbreakData[73],
+                rurino__graduation__ur__limitbreak: limitbreakData[74],
+                rurino__graduation__sr__limitbreak: limitbreakData[75],
+                megumi__graduation__ur__limitbreak: limitbreakData[76],
+                megumi__graduation__sr__limitbreak: limitbreakData[77]
             });
             alert("Data Saved"); 
         } else {
