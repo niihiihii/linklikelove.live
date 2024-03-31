@@ -100,7 +100,8 @@ const cardList = ['kaho__party__ur',
                   'rurino__graduation__ur',
                   'rurino__graduation__sr',
                   'megumi__graduation__ur',
-                  'megumi__graduation__sr'];
+                  'megumi__graduation__sr',
+                  'sachi__graduation__ur'];
 const drNodeList = [];
 const specialNodeList = [];
 const cardNodeList = [];
@@ -279,6 +280,13 @@ function loadData() {
                         tsuzuri__graduation__sr__limitbreak: [],
                         rurino__graduation__sr__limitbreak: [],
                         megumi__graduation__sr__limitbreak: []
+                    },
+                    {merge: true});
+                    loadData();
+                } else if (result.data().sachi__graduation__ur === undefined) {
+                    db.collection('users').doc(uid).set({
+                        sachi__graduation__ur: [],
+                        sachi__graduation__ur__limitbreak: []
                     },
                     {merge: true});
                     loadData();
@@ -643,6 +651,10 @@ function loadData() {
                         cardData[77][i] = result.data().megumi__graduation__sr[i];
                         displayCard(cardNodeList[77], cardData[77], i);
                     }
+                    for (let i = 0; i < result.data().sachi__graduation__ur.length; i++){
+                        cardData[78][i] = result.data().sachi__graduation__ur[i];
+                        displayCard(cardNodeList[78], cardData[78], i);
+                    }
 
                     for (let i = 0; i < result.data().kaho__dr__limitbreak.length; i++){
                         drlimitbreakData[0][i] = result.data().kaho__dr__limitbreak[i];
@@ -1004,6 +1016,10 @@ function loadData() {
                         limitbreakData[77][i] = result.data().megumi__graduation__sr__limitbreak[i];
                         displayLimitbreak(cardNodeList[77], limitbreakData[77], i);
                     }
+                    for (let i = 0; i < result.data().sachi__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[78][i] = result.data().sachi__graduation__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[78], limitbreakData[78], i);
+                    }
 
                     alert("Data Loaded"); 
                 }
@@ -1142,6 +1158,7 @@ function saveData() {
                 rurino__graduation__sr: cardData[75],
                 megumi__graduation__ur: cardData[76],
                 megumi__graduation__sr: cardData[77],
+                sachi__graduation__ur: cardData[78],
                 kaho__dr__limitbreak: drlimitbreakData[0],
                 kozue__dr__limitbreak: drlimitbreakData[1],
                 sayaka__dr__limitbreak: drlimitbreakData[2],
@@ -1231,7 +1248,8 @@ function saveData() {
                 rurino__graduation__ur__limitbreak: limitbreakData[74],
                 rurino__graduation__sr__limitbreak: limitbreakData[75],
                 megumi__graduation__ur__limitbreak: limitbreakData[76],
-                megumi__graduation__sr__limitbreak: limitbreakData[77]
+                megumi__graduation__sr__limitbreak: limitbreakData[77],
+                sachi__graduation__ur__limitbreak: limitbreakData[78]
             });
             alert("Data Saved"); 
         } else {
@@ -1389,18 +1407,20 @@ function downloadURL(url, name){
 }
 
 const memberSectionList = [$('.member__section__kaho'),
-                         $('.member__section__kozue'),
-                         $('.member__section__sayaka'),
-                         $('.member__section__tsuzuri'),
-                         $('.member__section__rurino'),
-                         $('.member__section__megumi'),];
+                           $('.member__section__kozue'),
+                           $('.member__section__sayaka'),
+                           $('.member__section__tsuzuri'),
+                           $('.member__section__rurino'),
+                           $('.member__section__megumi'),
+                           $('.member__section__sachi')];
 
 const titleButtonList = [$('.titleButton__kaho'),
                          $('.titleButton__kozue'),
                          $('.titleButton__sayaka'),
                          $('.titleButton__tsuzuri'),
                          $('.titleButton__rurino'),
-                         $('.titleButton__megumi'),];
+                         $('.titleButton__megumi'),
+                         $('.titleButton__sachi')];
 
 $('.downImgButton').click(function() {
     for (let i = 0; i < titleButtonList.length; i++) {

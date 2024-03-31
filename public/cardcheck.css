@@ -70,6 +70,9 @@ body::-webkit-scrollbar {
 .titleButton__megumi {
     background-color: #c8c2c6;
 }
+.titleButton__sachi {
+    background-color: #758e66;
+}
 
 .dr {
     display: flex;
@@ -130,6 +133,16 @@ body::-webkit-scrollbar {
     height: 10.417vw;
     max-height: 200px;
     background-color: #e28a9a;
+}
+
+.graduation__sachi {
+    display: flex;
+    width: 93.75vw;
+    max-width: 1800px;
+    height: 10.417vw;
+    max-height: 200px;
+    background-color: #e28a9a;
+    border-radius: 0 0 1vw 1vw;
 }
 
 .graduation__icon {
