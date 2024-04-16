@@ -73,6 +73,15 @@ body::-webkit-scrollbar {
 .titleButton__sachi {
     background-color: #758e66;
 }
+.titleButton__ginko {
+    background-color: #a2d7dd;
+}
+.titleButton__kosuzu {
+    background-color: #fad764;
+}
+.titleButton__hime {
+    background-color: #9d8de2;
+}
 
 .dr {
     display: flex;

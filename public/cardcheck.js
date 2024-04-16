@@ -14,14 +14,20 @@ const drList = ['kaho__dr',
                 'sayaka__dr',
                 'tsuzuri__dr',
                 'rurino__dr',
-                'megumi__dr'];
+                'megumi__dr',
+                'ginko__dr',
+                'kosuzu__dr',
+                'hime__dr'];
 
 const specialList = ['kaho__special__ur',
                      'kozue__special__ur',
                      'sayaka__special__ur',
                      'tsuzuri__special__ur',
                      'rurino__special__ur',
-                     'megumi__special__ur'];
+                     'megumi__special__ur',
+                     'ginko__special__ur',
+                     'kosuzu__special__ur',
+                     'hime__special__ur'];
 
 const cardList = ['kaho__party__ur',
                   'kozue__party__ur',
@@ -101,7 +107,46 @@ const cardList = ['kaho__party__ur',
                   'rurino__graduation__sr',
                   'megumi__graduation__ur',
                   'megumi__graduation__sr',
-                  'sachi__graduation__ur'];
+                  'sachi__graduation__ur',
+                  'ginko__party__ur',
+                  'ginko__spring__ur',
+                  'ginko__spring__sr',
+                  'ginko__summer__ur',
+                  'ginko__summer__sr',
+                  'ginko__autumn__ur',
+                  'ginko__autumn__sr',
+                  'ginko__winter__ur',
+                  'ginko__winter__sr',
+                  'ginko__common__ur',
+                  'ginko__common__sr',
+                  'ginko__graduation__ur',
+                  'ginko__graduation__sr',
+                  'kosuzu__party__ur',
+                  'kosuzu__spring__ur',
+                  'kosuzu__spring__sr',
+                  'kosuzu__summer__ur',
+                  'kosuzu__summer__sr',
+                  'kosuzu__autumn__ur',
+                  'kosuzu__autumn__sr',
+                  'kosuzu__winter__ur',
+                  'kosuzu__winter__sr',
+                  'kosuzu__common__ur',
+                  'kosuzu__common__sr',
+                  'kosuzu__graduation__ur',
+                  'kosuzu__graduation__sr',
+                  'hime__party__ur',
+                  'hime__spring__ur',
+                  'hime__spring__sr',
+                  'hime__summer__ur',
+                  'hime__summer__sr',
+                  'hime__autumn__ur',
+                  'hime__autumn__sr',
+                  'hime__winter__ur',
+                  'hime__winter__sr',
+                  'hime__common__ur',
+                  'hime__common__sr',
+                  'hime__graduation__ur',
+                  'hime__graduation__sr'];
 const drNodeList = [];
 const specialNodeList = [];
 const cardNodeList = [];
@@ -290,6 +335,101 @@ function loadData() {
                     },
                     {merge: true});
                     loadData();
+                } else if (result.data().ginko__dr === undefined) {
+                    db.collection('users').doc(uid).set({
+                        ginko__dr: [],
+                        kosuzu__dr: [],
+                        hime__dr: [],
+                        ginko__special__ur: [],
+                        kosuzu__special__ur: [],
+                        hime__special__ur: [],
+                        ginko__party__ur: [],
+                        ginko__spring__ur: [],
+                        ginko__spring__sr: [],
+                        ginko__summer__ur: [],
+                        ginko__summer__sr: [],
+                        ginko__autumn__ur: [],
+                        ginko__autumn__sr: [],
+                        ginko__winter__ur: [],
+                        ginko__winter__sr: [],
+                        ginko__common__ur: [],
+                        ginko__common__sr: [],
+                        ginko__graduation__ur: [],
+                        ginko__graduation__sr: [],
+                        kosuzu__party__ur: [],
+                        kosuzu__spring__ur: [],
+                        kosuzu__spring__sr: [],
+                        kosuzu__summer__ur: [],
+                        kosuzu__summer__sr: [],
+                        kosuzu__autumn__ur: [],
+                        kosuzu__autumn__sr: [],
+                        kosuzu__winter__ur: [],
+                        kosuzu__winter__sr: [],
+                        kosuzu__common__ur: [],
+                        kosuzu__common__sr: [],
+                        kosuzu__graduation__ur: [],
+                        kosuzu__graduation__sr: [],
+                        hime__party__ur: [],
+                        hime__spring__ur: [],
+                        hime__spring__sr: [],
+                        hime__summer__ur: [],
+                        hime__summer__sr: [],
+                        hime__autumn__ur: [],
+                        hime__autumn__sr: [],
+                        hime__winter__ur: [],
+                        hime__winter__sr: [],
+                        hime__common__ur: [],
+                        hime__common__sr: [],
+                        hime__graduation__ur: [],
+                        hime__graduation__sr: [],
+                        ginko__dr__limitbreak: [],
+                        kosuzu__dr__limitbreak: [],
+                        hime__dr__limitbreak: [],
+                        ginko__special__ur__limitbreak: [],
+                        kosuzu__special__ur__limitbreak: [],
+                        hime__special__ur__limitbreak: [],
+                        ginko__party__ur__limitbreak: [],
+                        ginko__spring__ur__limitbreak: [],
+                        ginko__spring__sr__limitbreak: [],
+                        ginko__summer__ur__limitbreak: [],
+                        ginko__summer__sr__limitbreak: [],
+                        ginko__autumn__ur__limitbreak: [],
+                        ginko__autumn__sr__limitbreak: [],
+                        ginko__winter__ur__limitbreak: [],
+                        ginko__winter__sr__limitbreak: [],
+                        ginko__common__ur__limitbreak: [],
+                        ginko__common__sr__limitbreak: [],
+                        ginko__graduation__ur__limitbreak: [],
+                        ginko__graduation__sr__limitbreak: [],
+                        kosuzu__party__ur__limitbreak: [],
+                        kosuzu__spring__ur__limitbreak: [],
+                        kosuzu__spring__sr__limitbreak: [],
+                        kosuzu__summer__ur__limitbreak: [],
+                        kosuzu__summer__sr__limitbreak: [],
+                        kosuzu__autumn__ur__limitbreak: [],
+                        kosuzu__autumn__sr__limitbreak: [],
+                        kosuzu__winter__ur__limitbreak: [],
+                        kosuzu__winter__sr__limitbreak: [],
+                        kosuzu__common__ur__limitbreak: [],
+                        kosuzu__common__sr__limitbreak: [],
+                        kosuzu__graduation__ur__limitbreak: [],
+                        kosuzu__graduation__sr__limitbreak: [],
+                        hime__party__ur__limitbreak: [],
+                        hime__spring__ur__limitbreak: [],
+                        hime__spring__sr__limitbreak: [],
+                        hime__summer__ur__limitbreak: [],
+                        hime__summer__sr__limitbreak: [],
+                        hime__autumn__ur__limitbreak: [],
+                        hime__autumn__sr__limitbreak: [],
+                        hime__winter__ur__limitbreak: [],
+                        hime__winter__sr__limitbreak: [],
+                        hime__common__ur__limitbreak: [],
+                        hime__common__sr__limitbreak: [],
+                        hime__graduation__ur__limitbreak: [],
+                        hime__graduation__sr__limitbreak: [],
+                    },
+                    {merge: true});
+                    loadData();
                 } else {
                     for (let i = 0; i < result.data().kaho__dr.length; i++){
                         drData[0][i] = result.data().kaho__dr[i];
@@ -315,6 +455,18 @@ function loadData() {
                         drData[5][i] = result.data().megumi__dr[i];
                         displayDr(drNodeList[5], drData[5], i);
                     }
+                    for (let i = 0; i < result.data().ginko__dr.length; i++){
+                        drData[6][i] = result.data().ginko__dr[i];
+                        displayDr(drNodeList[6], drData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__dr.length; i++){
+                        drData[7][i] = result.data().kosuzu__dr[i];
+                        displayDr(drNodeList[7], drData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__dr.length; i++){
+                        drData[8][i] = result.data().hime__dr[i];
+                        displayDr(drNodeList[8], drData[8], i);
+                    }
                     for (let i = 0; i < result.data().kaho__special__ur.length; i++){
                         specialData[0][i] = result.data().kaho__special__ur[i];
                         displaySpecial(specialNodeList[0], specialData[0], i);
@@ -338,6 +490,18 @@ function loadData() {
                     for (let i = 0; i < result.data().megumi__special__ur.length; i++){
                         specialData[5][i] = result.data().megumi__special__ur[i];
                         displaySpecial(specialNodeList[5], specialData[5], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__special__ur.length; i++){
+                        specialData[6][i] = result.data().ginko__special__ur[i];
+                        displaySpecial(specialNodeList[6], specialData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__special__ur.length; i++){
+                        specialData[7][i] = result.data().kosuzu__special__ur[i];
+                        displaySpecial(specialNodeList[7], specialData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__special__ur.length; i++){
+                        specialData[8][i] = result.data().hime__special__ur[i];
+                        displaySpecial(specialNodeList[8], specialData[8], i);
                     }
                     for (let i = 0; i < result.data().kaho__party__ur.length; i++){
                         cardData[0][i] = result.data().kaho__party__ur[i];
@@ -655,6 +819,162 @@ function loadData() {
                         cardData[78][i] = result.data().sachi__graduation__ur[i];
                         displayCard(cardNodeList[78], cardData[78], i);
                     }
+                    for (let i = 0; i < result.data().ginko__party__ur.length; i++){
+                        cardData[79][i] = result.data().ginko__party__ur[i];
+                        displayCard(cardNodeList[79], cardData[79], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__spring__ur.length; i++){
+                        cardData[80][i] = result.data().ginko__spring__ur[i];
+                        displayCard(cardNodeList[80], cardData[80], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__spring__sr.length; i++){
+                        cardData[81][i] = result.data().ginko__spring__sr[i];
+                        displayCard(cardNodeList[81], cardData[81], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__summer__ur.length; i++){
+                        cardData[82][i] = result.data().ginko__summer__ur[i];
+                        displayCard(cardNodeList[82], cardData[82], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__summer__sr.length; i++){
+                        cardData[83][i] = result.data().ginko__summer__sr[i];
+                        displayCard(cardNodeList[83], cardData[83], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__autumn__ur.length; i++){
+                        cardData[84][i] = result.data().ginko__autumn__ur[i];
+                        displayCard(cardNodeList[84], cardData[84], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__autumn__sr.length; i++){
+                        cardData[85][i] = result.data().ginko__autumn__sr[i];
+                        displayCard(cardNodeList[85], cardData[85], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__winter__ur.length; i++){
+                        cardData[86][i] = result.data().ginko__winter__ur[i];
+                        displayCard(cardNodeList[86], cardData[86], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__winter__sr.length; i++){
+                        cardData[87][i] = result.data().ginko__winter__sr[i];
+                        displayCard(cardNodeList[87], cardData[87], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__common__ur.length; i++){
+                        cardData[88][i] = result.data().ginko__common__ur[i];
+                        displayCard(cardNodeList[88], cardData[88], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__common__sr.length; i++){
+                        cardData[89][i] = result.data().ginko__common__sr[i];
+                        displayCard(cardNodeList[89], cardData[89], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__graduation__ur.length; i++){
+                        cardData[90][i] = result.data().ginko__graduation__ur[i];
+                        displayCard(cardNodeList[90], cardData[90], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__graduation__sr.length; i++){
+                        cardData[91][i] = result.data().ginko__graduation__sr[i];
+                        displayCard(cardNodeList[91], cardData[91], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__party__ur.length; i++){
+                        cardData[92][i] = result.data().kosuzu__party__ur[i];
+                        displayCard(cardNodeList[92], cardData[92], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__spring__ur.length; i++){
+                        cardData[93][i] = result.data().kosuzu__spring__ur[i];
+                        displayCard(cardNodeList[93], cardData[93], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__spring__sr.length; i++){
+                        cardData[94][i] = result.data().kosuzu__spring__sr[i];
+                        displayCard(cardNodeList[94], cardData[94], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__summer__ur.length; i++){
+                        cardData[95][i] = result.data().kosuzu__summer__ur[i];
+                        displayCard(cardNodeList[95], cardData[95], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__summer__sr.length; i++){
+                        cardData[96][i] = result.data().kosuzu__summer__sr[i];
+                        displayCard(cardNodeList[96], cardData[96], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__autumn__ur.length; i++){
+                        cardData[97][i] = result.data().kosuzu__autumn__ur[i];
+                        displayCard(cardNodeList[97], cardData[97], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__autumn__sr.length; i++){
+                        cardData[98][i] = result.data().kosuzu__autumn__sr[i];
+                        displayCard(cardNodeList[98], cardData[98], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__winter__ur.length; i++){
+                        cardData[99][i] = result.data().kosuzu__winter__ur[i];
+                        displayCard(cardNodeList[99], cardData[99], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__winter__sr.length; i++){
+                        cardData[100][i] = result.data().kosuzu__winter__sr[i];
+                        displayCard(cardNodeList[100], cardData[100], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__common__ur.length; i++){
+                        cardData[101][i] = result.data().kosuzu__common__ur[i];
+                        displayCard(cardNodeList[101], cardData[101], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__common__sr.length; i++){
+                        cardData[102][i] = result.data().kosuzu__common__sr[i];
+                        displayCard(cardNodeList[102], cardData[102], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__graduation__ur.length; i++){
+                        cardData[103][i] = result.data().kosuzu__graduation__ur[i];
+                        displayCard(cardNodeList[103], cardData[103], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__graduation__sr.length; i++){
+                        cardData[104][i] = result.data().kosuzu__graduation__sr[i];
+                        displayCard(cardNodeList[104], cardData[104], i);
+                    }
+                    for (let i = 0; i < result.data().hime__party__ur.length; i++){
+                        cardData[105][i] = result.data().hime__party__ur[i];
+                        displayCard(cardNodeList[105], cardData[105], i);
+                    }
+                    for (let i = 0; i < result.data().hime__spring__ur.length; i++){
+                        cardData[106][i] = result.data().hime__spring__ur[i];
+                        displayCard(cardNodeList[106], cardData[106], i);
+                    }
+                    for (let i = 0; i < result.data().hime__spring__sr.length; i++){
+                        cardData[107][i] = result.data().hime__spring__sr[i];
+                        displayCard(cardNodeList[107], cardData[107], i);
+                    }
+                    for (let i = 0; i < result.data().hime__summer__ur.length; i++){
+                        cardData[108][i] = result.data().hime__summer__ur[i];
+                        displayCard(cardNodeList[108], cardData[108], i);
+                    }
+                    for (let i = 0; i < result.data().hime__summer__sr.length; i++){
+                        cardData[109][i] = result.data().hime__summer__sr[i];
+                        displayCard(cardNodeList[109], cardData[109], i);
+                    }
+                    for (let i = 0; i < result.data().hime__autumn__ur.length; i++){
+                        cardData[110][i] = result.data().hime__autumn__ur[i];
+                        displayCard(cardNodeList[110], cardData[110], i);
+                    }
+                    for (let i = 0; i < result.data().hime__autumn__sr.length; i++){
+                        cardData[111][i] = result.data().hime__autumn__sr[i];
+                        displayCard(cardNodeList[111], cardData[111], i);
+                    }
+                    for (let i = 0; i < result.data().hime__winter__ur.length; i++){
+                        cardData[112][i] = result.data().hime__winter__ur[i];
+                        displayCard(cardNodeList[112], cardData[112], i);
+                    }
+                    for (let i = 0; i < result.data().hime__winter__sr.length; i++){
+                        cardData[113][i] = result.data().hime__winter__sr[i];
+                        displayCard(cardNodeList[113], cardData[113], i);
+                    }
+                    for (let i = 0; i < result.data().hime__common__ur.length; i++){
+                        cardData[114][i] = result.data().hime__common__ur[i];
+                        displayCard(cardNodeList[114], cardData[114], i);
+                    }
+                    for (let i = 0; i < result.data().hime__common__sr.length; i++){
+                        cardData[115][i] = result.data().hime__common__sr[i];
+                        displayCard(cardNodeList[115], cardData[115], i);
+                    }
+                    for (let i = 0; i < result.data().hime__graduation__ur.length; i++){
+                        cardData[116][i] = result.data().hime__graduation__ur[i];
+                        displayCard(cardNodeList[116], cardData[116], i);
+                    }
+                    for (let i = 0; i < result.data().hime__graduation__sr.length; i++){
+                        cardData[117][i] = result.data().hime__graduation__sr[i];
+                        displayCard(cardNodeList[117], cardData[117], i);
+                    }
 
                     for (let i = 0; i < result.data().kaho__dr__limitbreak.length; i++){
                         drlimitbreakData[0][i] = result.data().kaho__dr__limitbreak[i];
@@ -680,6 +1000,18 @@ function loadData() {
                         drlimitbreakData[5][i] = result.data().megumi__dr__limitbreak[i];
                         displayLimitbreak(drNodeList[5], drlimitbreakData[5], i);
                     }
+                    for (let i = 0; i < result.data().ginko__dr__limitbreak.length; i++){
+                        drlimitbreakData[6][i] = result.data().ginko__dr__limitbreak[i];
+                        displayLimitbreak(drNodeList[6], drlimitbreakData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__dr__limitbreak.length; i++){
+                        drlimitbreakData[7][i] = result.data().kosuzu__dr__limitbreak[i];
+                        displayLimitbreak(drNodeList[7], drlimitbreakData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__dr__limitbreak.length; i++){
+                        drlimitbreakData[8][i] = result.data().hime__dr__limitbreak[i];
+                        displayLimitbreak(drNodeList[8], drlimitbreakData[8], i);
+                    }
                     for (let i = 0; i < result.data().kaho__special__ur__limitbreak.length; i++){
                         speciallimitbreakData[0][i] = result.data().kaho__special__ur__limitbreak[i];
                         displayLimitbreak(specialNodeList[0], speciallimitbreakData[0], i);
@@ -703,6 +1035,18 @@ function loadData() {
                     for (let i = 0; i < result.data().megumi__special__ur__limitbreak.length; i++){
                         speciallimitbreakData[5][i] = result.data().megumi__special__ur__limitbreak[i];
                         displayLimitbreak(specialNodeList[5], speciallimitbreakData[5], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[6][i] = result.data().ginko__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[6], speciallimitbreakData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[7][i] = result.data().kosuzu__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[7], speciallimitbreakData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__special__ur__limitbreak.length; i++){
+                        speciallimitbreakData[8][i] = result.data().hime__special__ur__limitbreak[i];
+                        displayLimitbreak(specialNodeList[8], speciallimitbreakData[8], i);
                     }
                     for (let i = 0; i < result.data().kaho__party__ur__limitbreak.length; i++){
                         limitbreakData[0][i] = result.data().kaho__party__ur__limitbreak[i];
@@ -1020,6 +1364,162 @@ function loadData() {
                         limitbreakData[78][i] = result.data().sachi__graduation__ur__limitbreak[i];
                         displayLimitbreak(cardNodeList[78], limitbreakData[78], i);
                     }
+                    for (let i = 0; i < result.data().ginko__party__ur__limitbreak.length; i++){
+                        limitbreakData[79][i] = result.data().ginko__party__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[79], limitbreakData[79], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__spring__ur__limitbreak.length; i++){
+                        limitbreakData[80][i] = result.data().ginko__spring__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[80], limitbreakData[80], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__spring__sr__limitbreak.length; i++){
+                        limitbreakData[81][i] = result.data().ginko__spring__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[81], limitbreakData[81], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__summer__ur__limitbreak.length; i++){
+                        limitbreakData[82][i] = result.data().ginko__summer__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[82], limitbreakData[82], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__summer__sr__limitbreak.length; i++){
+                        limitbreakData[83][i] = result.data().ginko__summer__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[83], limitbreakData[83], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__autumn__ur__limitbreak.length; i++){
+                        limitbreakData[84][i] = result.data().ginko__autumn__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[84], limitbreakData[84], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__autumn__sr__limitbreak.length; i++){
+                        limitbreakData[85][i] = result.data().ginko__autumn__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[85], limitbreakData[85], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__winter__ur__limitbreak.length; i++){
+                        limitbreakData[86][i] = result.data().ginko__winter__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[86], limitbreakData[86], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__winter__sr__limitbreak.length; i++){
+                        limitbreakData[87][i] = result.data().ginko__winter__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[87], limitbreakData[87], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__common__ur__limitbreak.length; i++){
+                        limitbreakData[88][i] = result.data().ginko__common__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[88], limitbreakData[88], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__common__sr__limitbreak.length; i++){
+                        limitbreakData[89][i] = result.data().ginko__common__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[89], limitbreakData[89], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[90][i] = result.data().ginko__graduation__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[90], limitbreakData[90], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[91][i] = result.data().ginko__graduation__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[91], limitbreakData[91], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__party__ur__limitbreak.length; i++){
+                        limitbreakData[92][i] = result.data().kosuzu__party__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[92], limitbreakData[92], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__spring__ur__limitbreak.length; i++){
+                        limitbreakData[93][i] = result.data().kosuzu__spring__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[93], limitbreakData[93], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__spring__sr__limitbreak.length; i++){
+                        limitbreakData[94][i] = result.data().kosuzu__spring__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[94], limitbreakData[94], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__summer__ur__limitbreak.length; i++){
+                        limitbreakData[95][i] = result.data().kosuzu__summer__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[95], limitbreakData[95], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__summer__sr__limitbreak.length; i++){
+                        limitbreakData[96][i] = result.data().kosuzu__summer__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[96], limitbreakData[96], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__autumn__ur__limitbreak.length; i++){
+                        limitbreakData[97][i] = result.data().kosuzu__autumn__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[97], limitbreakData[97], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__autumn__sr__limitbreak.length; i++){
+                        limitbreakData[98][i] = result.data().kosuzu__autumn__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[98], limitbreakData[98], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__winter__ur__limitbreak.length; i++){
+                        limitbreakData[99][i] = result.data().kosuzu__winter__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[99], limitbreakData[99], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__winter__sr__limitbreak.length; i++){
+                        limitbreakData[100][i] = result.data().kosuzu__winter__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[100], limitbreakData[100], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__common__ur__limitbreak.length; i++){
+                        limitbreakData[101][i] = result.data().kosuzu__common__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[101], limitbreakData[101], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__common__sr__limitbreak.length; i++){
+                        limitbreakData[102][i] = result.data().kosuzu__common__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[102], limitbreakData[102], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[103][i] = result.data().kosuzu__graduation__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[103], limitbreakData[103], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[104][i] = result.data().kosuzu__graduation__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[104], limitbreakData[104], i);
+                    }
+                    for (let i = 0; i < result.data().hime__party__ur__limitbreak.length; i++){
+                        limitbreakData[105][i] = result.data().hime__party__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[105], limitbreakData[105], i);
+                    }
+                    for (let i = 0; i < result.data().hime__spring__ur__limitbreak.length; i++){
+                        limitbreakData[106][i] = result.data().hime__spring__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[106], limitbreakData[106], i);
+                    }
+                    for (let i = 0; i < result.data().hime__spring__sr__limitbreak.length; i++){
+                        limitbreakData[107][i] = result.data().hime__spring__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[107], limitbreakData[107], i);
+                    }
+                    for (let i = 0; i < result.data().hime__summer__ur__limitbreak.length; i++){
+                        limitbreakData[108][i] = result.data().hime__summer__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[108], limitbreakData[108], i);
+                    }
+                    for (let i = 0; i < result.data().hime__summer__sr__limitbreak.length; i++){
+                        limitbreakData[109][i] = result.data().hime__summer__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[109], limitbreakData[109], i);
+                    }
+                    for (let i = 0; i < result.data().hime__autumn__ur__limitbreak.length; i++){
+                        limitbreakData[110][i] = result.data().hime__autumn__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[110], limitbreakData[110], i);
+                    }
+                    for (let i = 0; i < result.data().hime__autumn__sr__limitbreak.length; i++){
+                        limitbreakData[111][i] = result.data().hime__autumn__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[111], limitbreakData[111], i);
+                    }
+                    for (let i = 0; i < result.data().hime__winter__ur__limitbreak.length; i++){
+                        limitbreakData[112][i] = result.data().hime__winter__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[112], limitbreakData[112], i);
+                    }
+                    for (let i = 0; i < result.data().hime__winter__sr__limitbreak.length; i++){
+                        limitbreakData[113][i] = result.data().hime__winter__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[113], limitbreakData[113], i);
+                    }
+                    for (let i = 0; i < result.data().hime__common__ur__limitbreak.length; i++){
+                        limitbreakData[114][i] = result.data().hime__common__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[114], limitbreakData[114], i);
+                    }
+                    for (let i = 0; i < result.data().hime__common__sr__limitbreak.length; i++){
+                        limitbreakData[115][i] = result.data().hime__common__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[115], limitbreakData[115], i);
+                    }
+                    for (let i = 0; i < result.data().hime__graduation__ur__limitbreak.length; i++){
+                        limitbreakData[116][i] = result.data().hime__graduation__ur__limitbreak[i];
+                        displayLimitbreak(cardNodeList[116], limitbreakData[116], i);
+                    }
+                    for (let i = 0; i < result.data().hime__graduation__sr__limitbreak.length; i++){
+                        limitbreakData[117][i] = result.data().hime__graduation__sr__limitbreak[i];
+                        displayLimitbreak(cardNodeList[117], limitbreakData[117], i);
+                    }
 
                     alert("Data Loaded"); 
                 }
@@ -1074,12 +1574,18 @@ function saveData() {
                 tsuzuri__dr: drData[3],
                 rurino__dr: drData[4],
                 megumi__dr: drData[5],
+                ginko__dr: drData[6],
+                kosuzu__dr: drData[7],
+                hime__dr: drData[8],
                 kaho__special__ur: specialData[0],
                 kozue__special__ur: specialData[1],
                 sayaka__special__ur: specialData[2],
                 tsuzuri__special__ur: specialData[3],
                 rurino__special__ur: specialData[4],
                 megumi__special__ur: specialData[5],
+                ginko__special__ur: specialData[6],
+                kosuzu__special__ur: specialData[7],
+                hime__special__ur: specialData[8],
                 kaho__party__ur: cardData[0],
                 kozue__party__ur: cardData[1],
                 sayaka__party__ur: cardData[2],
@@ -1159,18 +1665,63 @@ function saveData() {
                 megumi__graduation__ur: cardData[76],
                 megumi__graduation__sr: cardData[77],
                 sachi__graduation__ur: cardData[78],
+                ginko__party__ur: cardData[79],
+                ginko__spring__ur: cardData[80],
+                ginko__spring__sr: cardData[81],
+                ginko__summer__ur: cardData[82],
+                ginko__summer__sr: cardData[83],
+                ginko__autumn__ur: cardData[84],
+                ginko__autumn__sr: cardData[85],
+                ginko__winter__ur: cardData[86],
+                ginko__winter__sr: cardData[87],
+                ginko__common__ur: cardData[88],
+                ginko__common__sr: cardData[89],
+                ginko__graduation__ur: cardData[90],
+                ginko__graduation__sr: cardData[91],
+                kosuzu__party__ur: cardData[92],
+                kosuzu__spring__ur: cardData[93],
+                kosuzu__spring__sr: cardData[94],
+                kosuzu__summer__ur: cardData[95],
+                kosuzu__summer__sr: cardData[96],
+                kosuzu__autumn__ur: cardData[97],
+                kosuzu__autumn__sr: cardData[98],
+                kosuzu__winter__ur: cardData[99],
+                kosuzu__winter__sr: cardData[100],
+                kosuzu__common__ur: cardData[101],
+                kosuzu__common__sr: cardData[102],
+                kosuzu__graduation__ur: cardData[103],
+                kosuzu__graduation__sr: cardData[104],
+                hime__party__ur: cardData[105],
+                hime__spring__ur: cardData[106],
+                hime__spring__sr: cardData[107],
+                hime__summer__ur: cardData[108],
+                hime__summer__sr: cardData[109],
+                hime__autumn__ur: cardData[110],
+                hime__autumn__sr: cardData[111],
+                hime__winter__ur: cardData[112],
+                hime__winter__sr: cardData[113],
+                hime__common__ur: cardData[114],
+                hime__common__sr: cardData[115],
+                hime__graduation__ur: cardData[116],
+                hime__graduation__sr: cardData[117],
                 kaho__dr__limitbreak: drlimitbreakData[0],
                 kozue__dr__limitbreak: drlimitbreakData[1],
                 sayaka__dr__limitbreak: drlimitbreakData[2],
                 tsuzuri__dr__limitbreak: drlimitbreakData[3],
                 rurino__dr__limitbreak: drlimitbreakData[4],
                 megumi__dr__limitbreak: drlimitbreakData[5],
+                ginko__dr__limitbreak: drlimitbreakData[6],
+                kosuzu__dr__limitbreak: drlimitbreakData[7],
+                hime__dr__limitbreak: drlimitbreakData[8],
                 kaho__special__ur__limitbreak: speciallimitbreakData[0],
                 kozue__special__ur__limitbreak: speciallimitbreakData[1],
                 sayaka__special__ur__limitbreak: speciallimitbreakData[2],
                 tsuzuri__special__ur__limitbreak: speciallimitbreakData[3],
                 rurino__special__ur__limitbreak: speciallimitbreakData[4],
                 megumi__special__ur__limitbreak: speciallimitbreakData[5],
+                ginko__special__ur__limitbreak: speciallimitbreakData[6],
+                kosuzu__special__ur__limitbreak: speciallimitbreakData[7],
+                hime__special__ur__limitbreak: speciallimitbreakData[8],
                 kaho__party__ur__limitbreak: limitbreakData[0],
                 kozue__party__ur__limitbreak: limitbreakData[1],
                 sayaka__party__ur__limitbreak: limitbreakData[2],
@@ -1249,7 +1800,46 @@ function saveData() {
                 rurino__graduation__sr__limitbreak: limitbreakData[75],
                 megumi__graduation__ur__limitbreak: limitbreakData[76],
                 megumi__graduation__sr__limitbreak: limitbreakData[77],
-                sachi__graduation__ur__limitbreak: limitbreakData[78]
+                sachi__graduation__ur__limitbreak: limitbreakData[78],
+                ginko__party__ur__limitbreak: limitbreakData[79],
+                ginko__spring__ur__limitbreak: limitbreakData[80],
+                ginko__spring__sr__limitbreak: limitbreakData[81],
+                ginko__summer__ur__limitbreak: limitbreakData[82],
+                ginko__summer__sr__limitbreak: limitbreakData[83],
+                ginko__autumn__ur__limitbreak: limitbreakData[84],
+                ginko__autumn__sr__limitbreak: limitbreakData[85],
+                ginko__winter__ur__limitbreak: limitbreakData[86],
+                ginko__winter__sr__limitbreak: limitbreakData[87],
+                ginko__common__ur__limitbreak: limitbreakData[88],
+                ginko__common__sr__limitbreak: limitbreakData[89],
+                ginko__graduation__ur__limitbreak: limitbreakData[90],
+                ginko__graduation__sr__limitbreak: limitbreakData[91],
+                kosuzu__party__ur__limitbreak: limitbreakData[92],
+                kosuzu__spring__ur__limitbreak: limitbreakData[93],
+                kosuzu__spring__sr__limitbreak: limitbreakData[94],
+                kosuzu__summer__ur__limitbreak: limitbreakData[95],
+                kosuzu__summer__sr__limitbreak: limitbreakData[96],
+                kosuzu__autumn__ur__limitbreak: limitbreakData[97],
+                kosuzu__autumn__sr__limitbreak: limitbreakData[98],
+                kosuzu__winter__ur__limitbreak: limitbreakData[99],
+                kosuzu__winter__sr__limitbreak: limitbreakData[100],
+                kosuzu__common__ur__limitbreak: limitbreakData[101],
+                kosuzu__common__sr__limitbreak: limitbreakData[102],
+                kosuzu__graduation__ur__limitbreak: limitbreakData[103],
+                kosuzu__graduation__sr__limitbreak: limitbreakData[104],
+                hime__party__ur__limitbreak: limitbreakData[105],
+                hime__spring__ur__limitbreak: limitbreakData[106],
+                hime__spring__sr__limitbreak: limitbreakData[107],
+                hime__summer__ur__limitbreak: limitbreakData[108],
+                hime__summer__sr__limitbreak: limitbreakData[109],
+                hime__autumn__ur__limitbreak: limitbreakData[110],
+                hime__autumn__sr__limitbreak: limitbreakData[111],
+                hime__winter__ur__limitbreak: limitbreakData[112],
+                hime__winter__sr__limitbreak: limitbreakData[113],
+                hime__common__ur__limitbreak: limitbreakData[114],
+                hime__common__sr__limitbreak: limitbreakData[115],
+                hime__graduation__ur__limitbreak: limitbreakData[116],
+                hime__graduation__sr__limitbreak: limitbreakData[117]
             });
             alert("Data Saved"); 
         } else {
@@ -1412,7 +2002,10 @@ const memberSectionList = [$('.member__section__kaho'),
                            $('.member__section__tsuzuri'),
                            $('.member__section__rurino'),
                            $('.member__section__megumi'),
-                           $('.member__section__sachi')];
+                           $('.member__section__sachi'),
+                           $('.member__section__ginko'),
+                           $('.member__section__kosuzu'),
+                           $('.member__section__hime')];
 
 const titleButtonList = [$('.titleButton__kaho'),
                          $('.titleButton__kozue'),
@@ -1420,7 +2013,10 @@ const titleButtonList = [$('.titleButton__kaho'),
                          $('.titleButton__tsuzuri'),
                          $('.titleButton__rurino'),
                          $('.titleButton__megumi'),
-                         $('.titleButton__sachi')];
+                         $('.titleButton__sachi'),
+                         $('.titleButton__ginko'),
+                         $('.titleButton__kosuzu'),
+                         $('.titleButton__hime'),];
 
 $('.downImgButton').click(function() {
     for (let i = 0; i < titleButtonList.length; i++) {
