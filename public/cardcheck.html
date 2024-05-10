@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,16 +12,17 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0PKRZ3K9H"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-Z0PKRZ3K9H');
+        gtag('config', 'G-Z0PKRZ3K9H');
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="frame">
-      <div class="checkerboard">
+        <div class="checkerboard">
             <div class="member__section member__section__sachi">
                 <button class="titleButton titleButton__hide titleButton__sachi" type="button">
                     <img class="titleButton__icon" src="/titlebutton/sachi.png" />
@@ -181,7 +183,7 @@
                         </div>
                         <div class="empty"></div>
                         <div class="empty"></div>
-                    </div>  
+                    </div>
                     <div class="card__section sr__section">
                         <div class="card kaho__spring__sr">
                             <div class="overlay">
@@ -1308,7 +1310,17 @@
                                     <img class="overlay" src="/limitbreak/limitbreak1.png" />
                                 </div>
                             </div>
-                            <div class="empty"></div>
+                            <div class="card ginko__common__ur">
+                                <div class="overlay">
+                                    <img class="cardimg" src="/common/ginko/ur/koinagashi.png" />
+                                </div>
+                                <div class="overlay opacity60">
+                                    <img class="overlay" src="/overlay/ur_plus0.png" />
+                                </div>
+                                <div class="overlay invisible">
+                                    <img class="overlay" src="/limitbreak/limitbreak1.png" />
+                                </div>
+                            </div>
                             <div class="empty"></div>
                         </div>
                         <div class="card__section ur__section">
@@ -3622,7 +3634,17 @@
                                     <img class="overlay" src="/limitbreak/limitbreak1.png" />
                                 </div>
                             </div>
-                            <div class="empty"></div>
+                            <div class="card hime__common__ur">
+                                <div class="overlay">
+                                    <img class="cardimg" src="/common/hime/ur/koinagashi.png" />
+                                </div>
+                                <div class="overlay opacity60">
+                                    <img class="overlay" src="/overlay/ur_plus0.png" />
+                                </div>
+                                <div class="overlay invisible">
+                                    <img class="overlay" src="/limitbreak/limitbreak1.png" />
+                                </div>
+                            </div>
                             <div class="empty"></div>
                         </div>
                         <div class="card__section ur__section">
@@ -3665,20 +3687,20 @@
                     </div>
                 </div>
             </div>
-      </div>
+        </div>
     </div>
     <div class="frame">
-      <button class="button downImgButton" type="button">Save<br>Image</button>
-      <button class="button checkButton" type="button">
-        <div class="checkButton__text">Lv.</div>
-        <img class="buttonimg invisible" src="/limitbreakbutton.png">
-      </button>
-      <button class="button loadDataButton" type="button">Load<br>Data</button>
-      <button class="button saveDataButton" type="button">Save<br>Data</button>
-      <div class="button infoButton">
-        <img class="buttonimg" src="/info.png">
-      </div>
-      <!-- <dialog class="infoModal">
+        <button class="button downImgButton" type="button">Save<br>Image</button>
+        <button class="button checkButton" type="button">
+            <div class="checkButton__text">Lv.</div>
+            <img class="buttonimg invisible" src="/limitbreakbutton.png">
+        </button>
+        <button class="button loadDataButton" type="button">Load<br>Data</button>
+        <button class="button saveDataButton" type="button">Save<br>Data</button>
+        <div class="button infoButton">
+            <img class="buttonimg" src="/info.png">
+        </div>
+        <!-- <dialog class="infoModal">
         <div class="modal_body">
             <div class="modal__section">
                 <div class="card__info">
@@ -3693,37 +3715,39 @@
             </div>
         </div>
       </dialog> -->
-      <div class="profile">
-          <a href="https://x.com/niihiihii">
-              <img src="/profile/x.png" />
-          </a>
-          <a href="https://github.com/niihiihii">
-              <img src="/profile/github.png" />
-          </a>
-      </div>
+        <div class="profile">
+            <a href="https://x.com/niihiihii">
+                <img src="/profile/x.png" />
+            </a>
+            <a href="https://github.com/niihiihii">
+                <img src="/profile/github.png" />
+            </a>
+        </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
     <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCmDdmzq6Ze2uS1pR4fworeRQfjJ7nwg28",
-        authDomain: "niihiihii.firebaseapp.com",
-        databaseURL: "https://niihiihii-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "niihiihii",
-        storageBucket: "niihiihii.appspot.com",
-        messagingSenderId: "357132681727",
-        appId: "1:357132681727:web:bcbc59506a45223387a7ca",
-        measurementId: "G-BXCMLREQTZ"
-      };
-      firebase.initializeApp(firebaseConfig);
+        const firebaseConfig = {
+            apiKey: "AIzaSyCmDdmzq6Ze2uS1pR4fworeRQfjJ7nwg28",
+            authDomain: "niihiihii.firebaseapp.com",
+            databaseURL: "https://niihiihii-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "niihiihii",
+            storageBucket: "niihiihii.appspot.com",
+            messagingSenderId: "357132681727",
+            appId: "1:357132681727:web:bcbc59506a45223387a7ca",
+            measurementId: "G-BXCMLREQTZ"
+        };
+        firebase.initializeApp(firebaseConfig);
     </script>
     <script src="cardcheck.js"></script>
 
 
-  </body>
+</body>
+
 </html>
