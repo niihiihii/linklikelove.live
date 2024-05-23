@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
 body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0;
     background-color: #938aff;
-    -ms-overflow-style: none; /* IE and Edge Hide Scrollbar*/
-    scrollbar-width: none; /* Firefox Hide Scrollbar*/
+    -ms-overflow-style: none;
+    /* IE and Edge Hide Scrollbar*/
+    scrollbar-width: none;
+    /* Firefox Hide Scrollbar*/
 }
+
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera Hide Scrollbar*/
+    display: none;
+    /* Chrome, Safari, Opera Hide Scrollbar*/
 }
+
 .frame {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     width: 100vw;
 }
+
 .checkerboard {
     display: flex;
     flex-flow: row wrap;
@@ -45,40 +52,52 @@ body::-webkit-scrollbar {
     border: none;
     border-radius: 1vw 1vw 0 0;
 }
+
 .titleButton__hide {
     border-radius: 1vw 1vw 1vw 1vw;
 }
+
 .titleButton__icon {
     height: 5.208vw;
     max-height: 100px;
 }
+
 .titleButton__kaho {
     background-color: #f8b500;
 }
+
 .titleButton__kozue {
     background-color: #68be8d;
 }
+
 .titleButton__sayaka {
     background-color: #5383c3;
 }
+
 .titleButton__tsuzuri {
     background-color: #c22d3b;
 }
+
 .titleButton__rurino {
     background-color: #e7609e;
 }
+
 .titleButton__megumi {
     background-color: #c8c2c6;
 }
+
 .titleButton__sachi {
     background-color: #758e66;
 }
+
 .titleButton__ginko {
     background-color: #a2d7dd;
 }
+
 .titleButton__kosuzu {
     background-color: #fad764;
 }
+
 .titleButton__hime {
     background-color: #9d8de2;
 }
@@ -99,6 +118,15 @@ body::-webkit-scrollbar {
     max-width: 128px;
     max-height: 176px;
     border: 0.25vw transparent solid;
+}
+
+.br {
+    display: flex;
+    width: 23.4375vw;
+    max-width: 450px;
+    height: 10.417vw;
+    max-height: 200px;
+    background-color: #d6e38a;
 }
 
 .party {
@@ -137,21 +165,11 @@ body::-webkit-scrollbar {
 
 .graduation {
     display: flex;
-    width: 23.4375vw;
-    max-width: 450px;
-    height: 10.417vw;
-    max-height: 200px;
-    background-color: #e28a9a;
-}
-
-.graduation__sachi {
-    display: flex;
     width: 93.75vw;
     max-width: 1800px;
     height: 10.417vw;
     max-height: 200px;
     background-color: #e28a9a;
-    border-radius: 0 0 1vw 1vw;
 }
 
 .graduation__icon {
@@ -178,6 +196,7 @@ body::-webkit-scrollbar {
     height: 3.75vw;
     max-height: 72px;
 }
+
 .spring {
     width: 23.4375vw;
     max-width: 450px;
@@ -206,9 +225,11 @@ body::-webkit-scrollbar {
     width: 93.75vw;
     max-width: 1800px;
     background-color: #180134;
-    border-radius: 0 0 1vw 1vw;
 }
 
+.bottom {
+    border-radius: 0 0 1vw 1vw;
+}
 
 
 .card__section {
@@ -229,6 +250,7 @@ body::-webkit-scrollbar {
     max-width: 1800px;
     max-height: 200px;
 }
+
 .cardimg {
     width: 6.667vw;
     height: 9.167vw;
@@ -237,6 +259,7 @@ body::-webkit-scrollbar {
     opacity: 30%;
     position: absolute;
 }
+
 .iconimg {
     width: 6.667vw;
     height: 9.167vw;
@@ -244,6 +267,7 @@ body::-webkit-scrollbar {
     max-height: 176px;
     position: absolute;
 }
+
 .empty {
     width: 6.667vw;
     height: 9.167vw;
@@ -275,6 +299,7 @@ body::-webkit-scrollbar {
 .visible {
     opacity: 100%;
 }
+
 .invisible {
     opacity: 0%;
 }
@@ -282,21 +307,27 @@ body::-webkit-scrollbar {
 .strongkaho {
     border: 0.25vw #f8b500 solid;
 }
+
 .strongkozue {
     border: 0.25vw #68be8d solid;
 }
+
 .strongsayaka {
     border: 0.25vw #5383c3 solid;
 }
+
 .strongtsuzuri {
     border: 0.25vw #c22d3b solid;
 }
+
 .strongrurino {
     border: 0.25vw #e7609e solid;
 }
+
 .strongmegumi {
     border: 0.25vw #c8c2c6 solid;
 }
+
 .crazycard {
     border: 0.25vw solid;
     border-image: linear-gradient(45deg, red, orange, yellow, green, blue, navy, purple);
@@ -339,12 +370,15 @@ dialog {
     background-color: #918afc;
     border: 0;
     border-radius: 20px;
-    -ms-overflow-style: none;  /* IE and Edge 스크롤바 없애기*/
-    scrollbar-width: none; /*Firefox 스크롤바 없애기*/
+    -ms-overflow-style: none;
+    /* IE and Edge 스크롤바 없애기*/
+    scrollbar-width: none;
+    /*Firefox 스크롤바 없애기*/
 }
 
 dialog::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+    display: none;
+    /* Chrome, Safari, Opera 스크롤바 없애기*/
 }
 
 dialog::backdrop {
@@ -361,6 +395,7 @@ dialog::backdrop {
     max-width: 576px;
     max-height: 576px;
 }
+
 .modal__section {
     display: flex;
     flex-flow: row wrap;
@@ -369,6 +404,7 @@ dialog::backdrop {
     width: 30vw;
     max-width: 576px;
 }
+
 .card__info {
     width: 6.667vw;
     height: 6.667vw;
@@ -383,13 +419,14 @@ dialog::backdrop {
     font-size: 1.5vw;
     margin: 0.5vw;
 }
+
 .profile {
     display: flex;
     justify-content: center;
     width: 100vw;
 }
 
-.profile > a > img {
+.profile>a>img {
     width: 6vw;
     height: 7.5vw;
     max-width: 50px;
@@ -400,6 +437,7 @@ dialog::backdrop {
 .marginZero {
     margin: 0px;
 }
+
 .displayNone {
     display: none;
 }
@@ -408,9 +446,11 @@ dialog::backdrop {
     0% {
         opacity: 100%;
     }
+
     50% {
         opacity: 0%;
     }
+
     100% {
         opacity: 100%;
     }
@@ -419,31 +459,39 @@ dialog::backdrop {
 .animation {
     animation: fadeInOut 5s infinite;
 }
+
 @media (min-width: 800px) {
     .card {
         border: 2px transparent solid;
     }
+
     .strongkaho {
         border: 2px #f8b500 solid;
     }
+
     .strongkozue {
         border: 2px #68be8d solid;
     }
+
     .strongsayaka {
         border: 2px #5383c3 solid;
     }
+
     .strongtsuzuri {
         border: 2px #c22d3b solid;
     }
+
     .strongrurino {
         border: 2px #e7609e solid;
     }
+
     .strongmegumi {
         border: 2px #c8c2c6 solid;
     }
+
     .crazycard {
         border: 2px solid;
         border-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
         border-image-slice: 1;
     }
-  }
+}

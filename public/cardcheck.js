@@ -28,6 +28,16 @@ const specialList = ['kaho__special__ur',
                      'ginko__special__ur',
                      'kosuzu__special__ur',
                      'hime__special__ur'];
+                     
+const brList = ['kaho__br',
+                'kozue__br',
+                'sayaka__br',
+                'tsuzuri__br',
+                'rurino__br',
+                'megumi__br',
+                'ginko__br',
+                'kosuzu__br',
+                'hime__br'];
 
 const cardList = ['kaho__party__ur',
                   'kozue__party__ur',
@@ -148,12 +158,15 @@ const cardList = ['kaho__party__ur',
                   'hime__graduation__ur',
                   'hime__graduation__sr'];
 const drNodeList = [];
+const brNodeList = [];
 const specialNodeList = [];
 const cardNodeList = [];
 const drData = [];
+const brData = [];
 const specialData = [];
 const cardData = [];
 const drlimitbreakData = [];
+const brlimitbreakData = [];
 const speciallimitbreakData = [];
 const limitbreakData = [];
 const db = firebase.firestore();
@@ -168,6 +181,16 @@ for (let i = 0; i < drList.length; i++) {
         drData[i].push(0);
         drlimitbreakData[i].push(0);
         drNodeList[i].eq(j).on("click", () => changeDr(drNodeList[i], drData[i] , j));
+    }
+}
+for (let i = 0; i < brList.length; i++) {
+    brNodeList.push($('.' + brList[i]));
+    brData.push([]);
+    brlimitbreakData.push([]);
+    for (let j = 0; j < brNodeList[i].length; j++) {  
+        brData[i].push(0);
+        brlimitbreakData[i].push(0);
+        brNodeList[i].eq(j).on("click", () => changeBr(brNodeList[i], brData[i] , j));
     }
 }
 for (let i = 0; i < specialList.length; i++) {
@@ -204,6 +227,12 @@ $('.checkButton').on("click", function() {
                 drNodeList[i].eq(j).on("click", () => changeDr(drNodeList[i], drData[i] , j));
             }
         }
+        for (let i = 0; i < brList.length; i++) {
+            for (let j = 0; j < brNodeList[i].length; j++) {
+                brNodeList[i].eq(j).off();
+                brNodeList[i].eq(j).on("click", () => changeBr(brNodeList[i], brData[i] , j));
+            }
+        }
         for (let i = 0; i < specialList.length; i++) {
             for (let j = 0; j < specialNodeList[i].length; j++) {
                 specialNodeList[i].eq(j).off();
@@ -222,6 +251,12 @@ $('.checkButton').on("click", function() {
             for (let j = 0; j < drNodeList[i].length; j++) {
                 drNodeList[i].eq(j).off();
                 drNodeList[i].eq(j).on("click", () => changeLimitbreak(drNodeList[i], drlimitbreakData[i] , j));
+            }
+        }
+        for (let i = 0; i < brList.length; i++) {
+            for (let j = 0; j < brNodeList[i].length; j++) {
+                brNodeList[i].eq(j).off();
+                brNodeList[i].eq(j).on("click", () => changeLimitbreak(brNodeList[i], brlimitbreakData[i] , j));
             }
         }
         for (let i = 0; i < specialList.length; i++) {
@@ -430,6 +465,29 @@ function loadData() {
                     },
                     {merge: true});
                     loadData();
+                } else if (result.data().kaho__br === undefined) {
+                    db.collection('users').doc(uid).set({
+                        kaho__br: [],
+                        kozue__br: [],
+                        sayaka__br: [],
+                        tsuzuri__br: [],
+                        rurino__br: [],
+                        megumi__br: [],
+                        ginko__br: [],
+                        kosuzu__br: [],
+                        hime__br: [],
+                        kaho__br__limitbreak: [],
+                        kozue__br__limitbreak: [],
+                        sayaka__br__limitbreak: [],
+                        tsuzuri__br__limitbreak: [],
+                        rurino__br__limitbreak: [],
+                        megumi__br__limitbreak: [],
+                        ginko__br__limitbreak: [],
+                        kosuzu__br__limitbreak: [],
+                        hime__br__limitbreak: []
+                    },
+                    {merge: true});
+                    loadData();
                 } else {
                     for (let i = 0; i < result.data().kaho__dr.length; i++){
                         drData[0][i] = result.data().kaho__dr[i];
@@ -466,6 +524,42 @@ function loadData() {
                     for (let i = 0; i < result.data().hime__dr.length; i++){
                         drData[8][i] = result.data().hime__dr[i];
                         displayDr(drNodeList[8], drData[8], i);
+                    }
+                    for (let i = 0; i < result.data().kaho__br.length; i++){
+                        brData[0][i] = result.data().kaho__br[i];
+                        displayBr(brNodeList[0], brData[0], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__br.length; i++){
+                        brData[1][i] = result.data().kozue__br[i];
+                        displayBr(brNodeList[1], brData[1], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__br.length; i++){
+                        brData[2][i] = result.data().sayaka__br[i];
+                        displayBr(brNodeList[2], brData[2], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__br.length; i++){
+                        brData[3][i] = result.data().tsuzuri__br[i];
+                        displayBr(brNodeList[3], brData[3], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__br.length; i++){
+                        brData[4][i] = result.data().rurino__br[i];
+                        displayBr(brNodeList[4], brData[4], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__br.length; i++){
+                        brData[5][i] = result.data().megumi__br[i];
+                        displayBr(brNodeList[5], brData[5], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__br.length; i++){
+                        brData[6][i] = result.data().ginko__br[i];
+                        displayBr(brNodeList[6], brData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__br.length; i++){
+                        brData[7][i] = result.data().kosuzu__br[i];
+                        displayBr(brNodeList[7], brData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__br.length; i++){
+                        brData[8][i] = result.data().hime__br[i];
+                        displayBr(brNodeList[8], brData[8], i);
                     }
                     for (let i = 0; i < result.data().kaho__special__ur.length; i++){
                         specialData[0][i] = result.data().kaho__special__ur[i];
@@ -1012,6 +1106,42 @@ function loadData() {
                         drlimitbreakData[8][i] = result.data().hime__dr__limitbreak[i];
                         displayLimitbreak(drNodeList[8], drlimitbreakData[8], i);
                     }
+                    for (let i = 0; i < result.data().kaho__br__limitbreak.length; i++){
+                        brlimitbreakData[0][i] = result.data().kaho__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[0], brlimitbreakData[0], i);
+                    }
+                    for (let i = 0; i < result.data().kozue__br__limitbreak.length; i++){
+                        brlimitbreakData[1][i] = result.data().kozue__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[1], brlimitbreakData[1], i);
+                    }
+                    for (let i = 0; i < result.data().sayaka__br__limitbreak.length; i++){
+                        brlimitbreakData[2][i] = result.data().sayaka__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[2], brlimitbreakData[2], i);
+                    }
+                    for (let i = 0; i < result.data().tsuzuri__br__limitbreak.length; i++){
+                        brlimitbreakData[3][i] = result.data().tsuzuri__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[3], brlimitbreakData[3], i);
+                    }
+                    for (let i = 0; i < result.data().rurino__br__limitbreak.length; i++){
+                        brlimitbreakData[4][i] = result.data().rurino__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[4], brlimitbreakData[4], i);
+                    }
+                    for (let i = 0; i < result.data().megumi__br__limitbreak.length; i++){
+                        brlimitbreakData[5][i] = result.data().megumi__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[5], brlimitbreakData[5], i);
+                    }
+                    for (let i = 0; i < result.data().ginko__br__limitbreak.length; i++){
+                        brlimitbreakData[6][i] = result.data().ginko__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[6], brlimitbreakData[6], i);
+                    }
+                    for (let i = 0; i < result.data().kosuzu__br__limitbreak.length; i++){
+                        brlimitbreakData[7][i] = result.data().kosuzu__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[7], brlimitbreakData[7], i);
+                    }
+                    for (let i = 0; i < result.data().hime__br__limitbreak.length; i++){
+                        brlimitbreakData[8][i] = result.data().hime__br__limitbreak[i];
+                        displayLimitbreak(brNodeList[8], brlimitbreakData[8], i);
+                    }
                     for (let i = 0; i < result.data().kaho__special__ur__limitbreak.length; i++){
                         speciallimitbreakData[0][i] = result.data().kaho__special__ur__limitbreak[i];
                         displayLimitbreak(specialNodeList[0], speciallimitbreakData[0], i);
@@ -1542,6 +1672,11 @@ function saveData() {
                     drData[i][j] = drData[i][j] % 3; 
                 }
             }
+            for (let i = 0; i < brData.length; i++) {
+                for (let j = 0; j < brData[i].length; j++) {
+                    brData[i][j] = brData[i][j] % 3; 
+                }
+            }
             for (let i = 0; i < specialData.length; i++) {
                 for (let j = 0; j < specialData[i].length; j++) {
                     specialData[i][j] = specialData[i][j] % 3; 
@@ -1555,6 +1690,11 @@ function saveData() {
             for (let i = 0; i < drlimitbreakData.length; i++) {
                 for (let j = 0; j < drlimitbreakData[i].length; j++) {
                     drlimitbreakData[i][j] = drlimitbreakData[i][j] % 5; 
+                }
+            }
+            for (let i = 0; i < brlimitbreakData.length; i++) {
+                for (let j = 0; j < brlimitbreakData[i].length; j++) {
+                    brlimitbreakData[i][j] = brlimitbreakData[i][j] % 5; 
                 }
             }
             for (let i = 0; i < speciallimitbreakData.length; i++) {
@@ -1577,6 +1717,15 @@ function saveData() {
                 ginko__dr: drData[6],
                 kosuzu__dr: drData[7],
                 hime__dr: drData[8],
+                kaho__br: brData[0],
+                kozue__br: brData[1],
+                sayaka__br: brData[2],
+                tsuzuri__br: brData[3],
+                rurino__br: brData[4],
+                megumi__br: brData[5],
+                ginko__br: brData[6],
+                kosuzu__br: brData[7],
+                hime__br: brData[8],
                 kaho__special__ur: specialData[0],
                 kozue__special__ur: specialData[1],
                 sayaka__special__ur: specialData[2],
@@ -1713,6 +1862,15 @@ function saveData() {
                 ginko__dr__limitbreak: drlimitbreakData[6],
                 kosuzu__dr__limitbreak: drlimitbreakData[7],
                 hime__dr__limitbreak: drlimitbreakData[8],
+                kaho__br__limitbreak: brlimitbreakData[0],
+                kozue__br__limitbreak: brlimitbreakData[1],
+                sayaka__br__limitbreak: brlimitbreakData[2],
+                tsuzuri__br__limitbreak: brlimitbreakData[3],
+                rurino__br__limitbreak: brlimitbreakData[4],
+                megumi__br__limitbreak: brlimitbreakData[5],
+                ginko__br__limitbreak: brlimitbreakData[6],
+                kosuzu__br__limitbreak: brlimitbreakData[7],
+                hime__br__limitbreak: brlimitbreakData[8],
                 kaho__special__ur__limitbreak: speciallimitbreakData[0],
                 kozue__special__ur__limitbreak: speciallimitbreakData[1],
                 sayaka__special__ur__limitbreak: speciallimitbreakData[2],
@@ -1875,6 +2033,35 @@ function displayDr(cards, count, num) {
 function changeDr(cards, count, num) {
     count[num]++;    
     displayDr(cards, count, num);
+}
+
+function displayBr(cards, count, num) {
+    if (count[num] % 3 === 0) {
+        cards[num].children[0].children[0].classList.remove("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.remove("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/br_plus0.png";
+        cards[num].children[2].classList.add("invisible");
+    } else if (count[num] % 3 === 1) {
+        cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/br_plus0.png";
+        cards[num].children[2].classList.remove("invisible");
+    } else {
+        cards[num].children[0].children[0].classList.add("visible");
+        for (let i = 0; i < cards[num].querySelectorAll('.opacity60').length; i++) {
+            cards[num].querySelectorAll('.opacity60')[i].classList.add("visible");
+        }
+        cards[num].children[1].children[0].src = "/overlay/br_plus1.png";
+        cards[num].children[2].classList.remove("invisible");
+    }
+}
+function changeBr(cards, count, num) {
+    count[num]++;    
+    displayBr(cards, count, num);
 }
 
 function displaySpecial(cards, count, num) {
