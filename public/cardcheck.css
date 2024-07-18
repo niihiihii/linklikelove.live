@@ -126,7 +126,15 @@ body::-webkit-scrollbar {
     max-width: 450px;
     height: 10.417vw;
     max-height: 200px;
-    background-color: #d6e38a;
+    background-color: #f6ffdb;
+}
+
+.birthday__icon {
+    width: 6.667vw;
+    height: 9.167vw;
+    max-width: 128px;
+    max-height: 176px;
+    border: 0.25vw transparent solid;
 }
 
 .party {
